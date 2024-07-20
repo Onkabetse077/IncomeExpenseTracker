@@ -6,5 +6,10 @@ namespace IncomeExpenseTracker
         {
             InitializeComponent();
         }
+
+        private void signinPageExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
