@@ -11,5 +11,12 @@ namespace IncomeExpenseTracker
         {
             Application.Exit();
         }
+
+        private void btnSignupSignin_Click(object sender, EventArgs e)
+        {
+            SignupPage signupPage = new SignupPage();   
+            signupPage.Show();
+            this.Hide();    
+        }
     }
 }
