@@ -135,6 +135,7 @@
             btnSignup.TabIndex = 16;
             btnSignup.Text = "Signup";
             btnSignup.UseVisualStyleBackColor = false;
+            btnSignup.Click += btnSignup_Click;
             // 
             // tbPasswordSignup
             // 
