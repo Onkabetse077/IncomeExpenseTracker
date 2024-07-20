@@ -34,6 +34,9 @@
             signinPageExit = new Label();
             lblSignin = new Label();
             lblUsernameSignin = new Label();
+            tbUsernameSignin = new TextBox();
+            tbPasswordSignin = new TextBox();
+            lblPasswordSignin = new Label();
             pnlSigninLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbSigninPage).BeginInit();
             SuspendLayout();
@@ -99,12 +102,39 @@
             lblUsernameSignin.TabIndex = 3;
             lblUsernameSignin.Text = "Username";
             // 
+            // tbUsernameSignin
+            // 
+            tbUsernameSignin.Location = new Point(401, 216);
+            tbUsernameSignin.Name = "tbUsernameSignin";
+            tbUsernameSignin.Size = new Size(387, 27);
+            tbUsernameSignin.TabIndex = 4;
+            // 
+            // tbPasswordSignin
+            // 
+            tbPasswordSignin.Location = new Point(401, 306);
+            tbPasswordSignin.Name = "tbPasswordSignin";
+            tbPasswordSignin.Size = new Size(387, 27);
+            tbPasswordSignin.TabIndex = 6;
+            // 
+            // lblPasswordSignin
+            // 
+            lblPasswordSignin.AutoSize = true;
+            lblPasswordSignin.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPasswordSignin.Location = new Point(401, 268);
+            lblPasswordSignin.Name = "lblPasswordSignin";
+            lblPasswordSignin.Size = new Size(94, 24);
+            lblPasswordSignin.TabIndex = 5;
+            lblPasswordSignin.Text = "Password";
+            // 
             // SigninPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 600);
+            Controls.Add(tbPasswordSignin);
+            Controls.Add(lblPasswordSignin);
+            Controls.Add(tbUsernameSignin);
             Controls.Add(lblUsernameSignin);
             Controls.Add(lblSignin);
             Controls.Add(signinPageExit);
@@ -127,5 +157,8 @@
         private PictureBox pbSigninPage;
         private Label lblSignin;
         private Label lblUsernameSignin;
+        private TextBox tbUsernameSignin;
+        private TextBox tbPasswordSignin;
+        private Label lblPasswordSignin;
     }
 }
