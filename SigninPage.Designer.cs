@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             pnlSigninLeft = new Panel();
+            btnSignUPSignin = new Button();
+            lblSignupSignin = new Label();
             lblIETSignin = new Label();
             pbSigninPage = new PictureBox();
             signinPageExit = new Label();
@@ -37,13 +39,17 @@
             tbUsernameSignin = new TextBox();
             tbPasswordSignin = new TextBox();
             lblPasswordSignin = new Label();
+            btnLoginSignin = new Button();
+            cbShowpasswordSignin = new CheckBox();
             pnlSigninLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbSigninPage).BeginInit();
             SuspendLayout();
             // 
             // pnlSigninLeft
             // 
-            pnlSigninLeft.BackColor = Color.FromArgb(84, 116, 70);
+            pnlSigninLeft.BackColor = Color.FromArgb(16, 97, 40);
+            pnlSigninLeft.Controls.Add(btnSignUPSignin);
+            pnlSigninLeft.Controls.Add(lblSignupSignin);
             pnlSigninLeft.Controls.Add(lblIETSignin);
             pnlSigninLeft.Controls.Add(pbSigninPage);
             pnlSigninLeft.Dock = DockStyle.Left;
@@ -51,6 +57,34 @@
             pnlSigninLeft.Name = "pnlSigninLeft";
             pnlSigninLeft.Size = new Size(380, 600);
             pnlSigninLeft.TabIndex = 0;
+            // 
+            // btnSignUPSignin
+            // 
+            btnSignUPSignin.BackColor = Color.FromArgb(16, 97, 40);
+            btnSignUPSignin.Cursor = Cursors.Hand;
+            btnSignUPSignin.FlatAppearance.BorderSize = 0;
+            btnSignUPSignin.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnSignUPSignin.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnSignUPSignin.FlatStyle = FlatStyle.Flat;
+            btnSignUPSignin.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSignUPSignin.ForeColor = SystemColors.ButtonHighlight;
+            btnSignUPSignin.Location = new Point(-3, 502);
+            btnSignUPSignin.Name = "btnSignUPSignin";
+            btnSignUPSignin.Size = new Size(380, 44);
+            btnSignUPSignin.TabIndex = 9;
+            btnSignUPSignin.Text = "Signup";
+            btnSignUPSignin.UseVisualStyleBackColor = false;
+            // 
+            // lblSignupSignin
+            // 
+            lblSignupSignin.AutoSize = true;
+            lblSignupSignin.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSignupSignin.ForeColor = SystemColors.ButtonHighlight;
+            lblSignupSignin.Location = new Point(21, 478);
+            lblSignupSignin.Name = "lblSignupSignin";
+            lblSignupSignin.Size = new Size(344, 21);
+            lblSignupSignin.TabIndex = 2;
+            lblSignupSignin.Text = "Don't Have An Account ? Register Here";
             // 
             // lblIETSignin
             // 
@@ -81,6 +115,7 @@
             signinPageExit.Size = new Size(24, 24);
             signinPageExit.TabIndex = 1;
             signinPageExit.Text = "X";
+            signinPageExit.Click += signinPageExit_Click;
             // 
             // lblSignin
             // 
@@ -104,6 +139,7 @@
             // 
             // tbUsernameSignin
             // 
+            tbUsernameSignin.BorderStyle = BorderStyle.FixedSingle;
             tbUsernameSignin.Location = new Point(401, 216);
             tbUsernameSignin.Name = "tbUsernameSignin";
             tbUsernameSignin.Size = new Size(387, 27);
@@ -111,6 +147,7 @@
             // 
             // tbPasswordSignin
             // 
+            tbPasswordSignin.BorderStyle = BorderStyle.FixedSingle;
             tbPasswordSignin.Location = new Point(401, 306);
             tbPasswordSignin.Name = "tbPasswordSignin";
             tbPasswordSignin.Size = new Size(387, 27);
@@ -126,12 +163,41 @@
             lblPasswordSignin.TabIndex = 5;
             lblPasswordSignin.Text = "Password";
             // 
+            // btnLoginSignin
+            // 
+            btnLoginSignin.BackColor = Color.FromArgb(16, 97, 40);
+            btnLoginSignin.Cursor = Cursors.Hand;
+            btnLoginSignin.FlatAppearance.BorderSize = 0;
+            btnLoginSignin.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnLoginSignin.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnLoginSignin.FlatStyle = FlatStyle.Flat;
+            btnLoginSignin.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLoginSignin.ForeColor = SystemColors.ButtonHighlight;
+            btnLoginSignin.Location = new Point(401, 390);
+            btnLoginSignin.Name = "btnLoginSignin";
+            btnLoginSignin.Size = new Size(132, 44);
+            btnLoginSignin.TabIndex = 7;
+            btnLoginSignin.Text = "Login";
+            btnLoginSignin.UseVisualStyleBackColor = false;
+            // 
+            // cbShowpasswordSignin
+            // 
+            cbShowpasswordSignin.AutoSize = true;
+            cbShowpasswordSignin.Location = new Point(656, 352);
+            cbShowpasswordSignin.Name = "cbShowpasswordSignin";
+            cbShowpasswordSignin.Size = new Size(132, 24);
+            cbShowpasswordSignin.TabIndex = 8;
+            cbShowpasswordSignin.Text = "Show Password";
+            cbShowpasswordSignin.UseVisualStyleBackColor = true;
+            // 
             // SigninPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 600);
+            Controls.Add(cbShowpasswordSignin);
+            Controls.Add(btnLoginSignin);
             Controls.Add(tbPasswordSignin);
             Controls.Add(lblPasswordSignin);
             Controls.Add(tbUsernameSignin);
@@ -160,5 +226,9 @@
         private TextBox tbUsernameSignin;
         private TextBox tbPasswordSignin;
         private Label lblPasswordSignin;
+        private Button btnLoginSignin;
+        private CheckBox cbShowpasswordSignin;
+        private Label lblSignupSignin;
+        private Button btnSignUPSignin;
     }
 }
