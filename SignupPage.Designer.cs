@@ -41,7 +41,7 @@
             lblUsernameSignup = new Label();
             lblSignup = new Label();
             signupPageExit = new Label();
-            textBox1 = new TextBox();
+            tbConfirmPassword = new TextBox();
             lblConfirmPassword = new Label();
             pnlSigninLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbSigninPage).BeginInit();
@@ -118,6 +118,7 @@
             cbShowpasswordSignup.TabIndex = 17;
             cbShowpasswordSignup.Text = "Show Password";
             cbShowpasswordSignup.UseVisualStyleBackColor = true;
+            cbShowpasswordSignup.CheckedChanged += cbShowpasswordSignup_CheckedChanged;
             // 
             // btnSignup
             // 
@@ -142,6 +143,7 @@
             tbPasswordSignup.BorderStyle = BorderStyle.FixedSingle;
             tbPasswordSignup.Location = new Point(407, 306);
             tbPasswordSignup.Name = "tbPasswordSignup";
+            tbPasswordSignup.PasswordChar = '#';
             tbPasswordSignup.Size = new Size(387, 27);
             tbPasswordSignup.TabIndex = 15;
             // 
@@ -194,13 +196,14 @@
             signupPageExit.Text = "X";
             signupPageExit.Click += signupPageExit_Click;
             // 
-            // textBox1
+            // tbConfirmPassword
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(407, 391);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(387, 27);
-            textBox1.TabIndex = 19;
+            tbConfirmPassword.BorderStyle = BorderStyle.FixedSingle;
+            tbConfirmPassword.Location = new Point(407, 391);
+            tbConfirmPassword.Name = "tbConfirmPassword";
+            tbConfirmPassword.PasswordChar = '#';
+            tbConfirmPassword.Size = new Size(387, 27);
+            tbConfirmPassword.TabIndex = 19;
             // 
             // lblConfirmPassword
             // 
@@ -217,7 +220,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 600);
-            Controls.Add(textBox1);
+            Controls.Add(tbConfirmPassword);
             Controls.Add(lblConfirmPassword);
             Controls.Add(pnlSigninLeft);
             Controls.Add(cbShowpasswordSignup);
@@ -254,7 +257,7 @@
         private Label lblUsernameSignup;
         private Label lblSignup;
         private Label signupPageExit;
-        private TextBox textBox1;
+        private TextBox tbConfirmPassword;
         private Label lblConfirmPassword;
     }
 }

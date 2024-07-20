@@ -151,6 +151,7 @@
             tbPasswordSignin.BorderStyle = BorderStyle.FixedSingle;
             tbPasswordSignin.Location = new Point(401, 306);
             tbPasswordSignin.Name = "tbPasswordSignin";
+            tbPasswordSignin.PasswordChar = '#';
             tbPasswordSignin.Size = new Size(387, 27);
             tbPasswordSignin.TabIndex = 6;
             // 
@@ -190,6 +191,7 @@
             cbShowpasswordSignin.TabIndex = 8;
             cbShowpasswordSignin.Text = "Show Password";
             cbShowpasswordSignin.UseVisualStyleBackColor = true;
+            cbShowpasswordSignin.CheckedChanged += cbShowpasswordSignin_CheckedChanged;
             // 
             // SigninPage
             // 

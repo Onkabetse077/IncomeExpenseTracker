@@ -14,9 +14,14 @@ namespace IncomeExpenseTracker
 
         private void btnSignupSignin_Click(object sender, EventArgs e)
         {
-            SignupPage signupPage = new SignupPage();   
+            SignupPage signupPage = new SignupPage();
             signupPage.Show();
-            this.Hide();    
+            this.Hide();
+        }
+
+        private void cbShowpasswordSignin_CheckedChanged(object sender, EventArgs e)
+        {
+            tbPasswordSignin.PasswordChar = (cbShowpasswordSignin.Checked) ? '\0' : '#';
         }
     }
 }
