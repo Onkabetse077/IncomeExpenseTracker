@@ -23,5 +23,10 @@ namespace IncomeExpenseTracker
         {
             tbPasswordSignin.PasswordChar = (cbShowpasswordSignin.Checked) ? '\0' : '#';
         }
+
+        private void btnLoginSignin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

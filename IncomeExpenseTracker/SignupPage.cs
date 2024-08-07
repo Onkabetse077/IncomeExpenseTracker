@@ -55,7 +55,28 @@ namespace IncomeExpenseTracker
                     {
                         connection.Open();
 
-                        string query = "SELECT * FROM users WHERE username = @username ";
+                        string query = "SELECT * FROM users WHERE username = @username";
+
+                        using (SqlCommand checkUser = new SqlCommand(query, connection))
+                        {
+                            checkUser.Parameters.AddWithValue("@username",tbUsernameSignup.Text.Trim());
+
+                            SqlDataAdapter adapter = new SqlDataAdapter();
+                            DataTable table = new DataTable();
+
+                            adapter.Fill(table);
+
+                            if(table.Rows.Count !=0)
+                            {
+                                string tempUsername = tbUsernameSignup.Text.Substring(0,1).ToUpper() + tbUsernameSignup.Text.Substring(1);
+                                MessageBox.Show(tempUsername + " is existing already","Error Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                string insertData = "INSERT INTO users(username,password,date_created) VALUES(@username,@password,@date)";
+                            }
+
+                        }
                     }
                     catch (Exception ex)
                     {

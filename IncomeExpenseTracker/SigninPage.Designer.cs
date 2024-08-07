@@ -181,6 +181,7 @@
             btnLoginSignin.TabIndex = 7;
             btnLoginSignin.Text = "Login";
             btnLoginSignin.UseVisualStyleBackColor = false;
+            btnLoginSignin.Click += btnLoginSignin_Click;
             // 
             // cbShowpasswordSignin
             // 
