@@ -50,6 +50,9 @@ namespace IncomeExpenseTracker
                     if(table.Rows.Count > 0)
                     {
                         MessageBox.Show("Login Successfully","Information Message",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MainPage mainPage = new MainPage();
+                        mainPage.Show();
+                        this.Hide();
                     }
                     else
                     {
