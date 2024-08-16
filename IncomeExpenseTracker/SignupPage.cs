@@ -14,7 +14,7 @@ namespace IncomeExpenseTracker
 {
     public partial class SignupPage : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\Onkabetse\Documents\Projects\Visual Studio\C#\IncomeExpenseTracker\IncomeExpenseTracker\tools\Databases\expenses.mdf"";Integrated Security=True;Connect Timeout=30");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\gosia\Documents\Projects\Visual Studio\C#\IncomeExpenseTracker\tools\Databases\expense.mdf"";Integrated Security=True;Connect Timeout=30");
         public SignupPage()
         {
             InitializeComponent();
@@ -61,26 +61,45 @@ namespace IncomeExpenseTracker
                         {
                             checkUser.Parameters.AddWithValue("@username",tbUsernameSignup.Text.Trim());
 
-                            SqlDataAdapter adapter = new SqlDataAdapter();
+                            SqlDataAdapter adapter = new SqlDataAdapter(checkUser);
                             DataTable table = new DataTable();
 
-                            adapter.Fill(table);
+                           adapter.Fill(table);
 
                             if(table.Rows.Count !=0)
                             {
                                 string tempUsername = tbUsernameSignup.Text.Substring(0,1).ToUpper() + tbUsernameSignup.Text.Substring(1);
                                 MessageBox.Show(tempUsername + " is existing already","Error Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            }else if(tbPasswordSignup.Text.Length < 8){
+                                MessageBox.Show("password is too short","Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
-                                string insertData = "INSERT INTO users(username,password,date_created) VALUES(@username,@password,@date)";
+                                string insertData = "INSERT INTO users(username ,password,date_created) VALUES (@username,@password,@date)";
+
+                                using (SqlCommand insertUser = new SqlCommand(insertData, connection)) 
+                                {
+                                    insertUser.Parameters.AddWithValue("@username",tbUsernameSignup.Text.Trim());
+                                    insertUser.Parameters.AddWithValue("@password", tbPasswordSignup.Text.Trim());
+                                    insertUser.Parameters.AddWithValue("@date",DateTime.Today);
+
+                                    insertUser.ExecuteNonQuery();
+
+                                    MessageBox.Show("User Registered Successfully","Informaton Message",MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    SigninPage loginform = new SigninPage();
+
+                                    loginform.Show();
+                                    this.Hide();
+
+                                }
                             }
 
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Failed Connection" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
