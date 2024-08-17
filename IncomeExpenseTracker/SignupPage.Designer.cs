@@ -31,8 +31,8 @@
             btnSigninSignup = new Button();
             pnlSigninLeft = new Panel();
             lblSigninSignup = new Label();
-            lblIETSignin = new Label();
-            pbSigninPage = new PictureBox();
+            lblIETSignup = new Label();
+            pbSignupPage = new PictureBox();
             cbShowpasswordSignup = new CheckBox();
             btnSignup = new Button();
             tbPasswordSignup = new TextBox();
@@ -44,7 +44,7 @@
             tbConfirmPassword = new TextBox();
             lblConfirmPassword = new Label();
             pnlSigninLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbSigninPage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbSignupPage).BeginInit();
             SuspendLayout();
             // 
             // btnSigninSignup
@@ -70,8 +70,8 @@
             pnlSigninLeft.BackColor = Color.FromArgb(16, 97, 40);
             pnlSigninLeft.Controls.Add(btnSigninSignup);
             pnlSigninLeft.Controls.Add(lblSigninSignup);
-            pnlSigninLeft.Controls.Add(lblIETSignin);
-            pnlSigninLeft.Controls.Add(pbSigninPage);
+            pnlSigninLeft.Controls.Add(lblIETSignup);
+            pnlSigninLeft.Controls.Add(pbSignupPage);
             pnlSigninLeft.Dock = DockStyle.Left;
             pnlSigninLeft.Location = new Point(0, 0);
             pnlSigninLeft.Name = "pnlSigninLeft";
@@ -89,25 +89,25 @@
             lblSigninSignup.TabIndex = 2;
             lblSigninSignup.Text = "Have An Account ? Signin";
             // 
-            // lblIETSignin
+            // lblIETSignup
             // 
-            lblIETSignin.AutoSize = true;
-            lblIETSignin.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIETSignin.ForeColor = SystemColors.ButtonHighlight;
-            lblIETSignin.Location = new Point(12, 230);
-            lblIETSignin.Name = "lblIETSignin";
-            lblIETSignin.Size = new Size(349, 28);
-            lblIETSignin.TabIndex = 1;
-            lblIETSignin.Text = "Income and Expense Tracker";
+            lblIETSignup.AutoSize = true;
+            lblIETSignup.Font = new Font("Tahoma", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIETSignup.ForeColor = SystemColors.ButtonHighlight;
+            lblIETSignup.Location = new Point(12, 230);
+            lblIETSignup.Name = "lblIETSignup";
+            lblIETSignup.Size = new Size(349, 28);
+            lblIETSignup.TabIndex = 1;
+            lblIETSignup.Text = "Income and Expense Tracker";
             // 
-            // pbSigninPage
+            // pbSignupPage
             // 
-            pbSigninPage.Image = Properties.Resources.ProfilePicture;
-            pbSigninPage.Location = new Point(136, 102);
-            pbSigninPage.Name = "pbSigninPage";
-            pbSigninPage.Size = new Size(100, 100);
-            pbSigninPage.TabIndex = 0;
-            pbSigninPage.TabStop = false;
+            pbSignupPage.Image = Properties.Resources.ProfilePicture;
+            pbSignupPage.Location = new Point(136, 102);
+            pbSignupPage.Name = "pbSignupPage";
+            pbSignupPage.Size = new Size(100, 100);
+            pbSignupPage.TabIndex = 0;
+            pbSignupPage.TabStop = false;
             // 
             // cbShowpasswordSignup
             // 
@@ -237,7 +237,7 @@
             Text = "SignupPage";
             pnlSigninLeft.ResumeLayout(false);
             pnlSigninLeft.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbSigninPage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbSignupPage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -247,8 +247,8 @@
         private Button btnSigninSignup;
         private Panel pnlSigninLeft;
         private Label lblSigninSignup;
-        private Label lblIETSignin;
-        private PictureBox pbSigninPage;
+        private Label lblIETSignup;
+        private PictureBox pbSignupPage;
         private CheckBox cbShowpasswordSignup;
         private Button btnSignup;
         private TextBox tbPasswordSignup;
