@@ -33,13 +33,15 @@
             lblIncomExpenseTracker = new Label();
             MainPageExit = new Label();
             pnlSideMainPage = new Panel();
+            btnLogout = new Button();
+            btnExpense = new Button();
+            btnIncome = new Button();
+            btnCategory = new Button();
             btnDashboard = new Button();
             label1 = new Label();
             lblWelcome = new Label();
             pbMainProfilePic = new PictureBox();
-            btnCategory = new Button();
-            btnExpense = new Button();
-            btnIncome = new Button();
+            pnlMain = new Panel();
             pnlHeaderMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlSideMainPage.SuspendLayout();
@@ -48,6 +50,7 @@
             // 
             // pnlHeaderMainPage
             // 
+            pnlHeaderMainPage.BackColor = SystemColors.ButtonHighlight;
             pnlHeaderMainPage.Controls.Add(pbLogo);
             pnlHeaderMainPage.Controls.Add(lblIncomExpenseTracker);
             pnlHeaderMainPage.Controls.Add(MainPageExit);
@@ -75,7 +78,6 @@
             lblIncomExpenseTracker.Size = new Size(304, 24);
             lblIncomExpenseTracker.TabIndex = 12;
             lblIncomExpenseTracker.Text = "Income and Expense Tracker";
-            lblIncomExpenseTracker.Click += lblIncomExpenseTracker_Click;
             // 
             // MainPageExit
             // 
@@ -91,6 +93,7 @@
             // pnlSideMainPage
             // 
             pnlSideMainPage.BackColor = Color.FromArgb(16, 97, 40);
+            pnlSideMainPage.Controls.Add(btnLogout);
             pnlSideMainPage.Controls.Add(btnExpense);
             pnlSideMainPage.Controls.Add(btnIncome);
             pnlSideMainPage.Controls.Add(btnCategory);
@@ -103,6 +106,75 @@
             pnlSideMainPage.Name = "pnlSideMainPage";
             pnlSideMainPage.Size = new Size(265, 740);
             pnlSideMainPage.TabIndex = 1;
+            // 
+            // btnLogout
+            // 
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnLogout.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = SystemColors.ButtonHighlight;
+            btnLogout.Image = Properties.Resources.logout;
+            btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogout.Location = new Point(12, 678);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(239, 50);
+            btnLogout.TabIndex = 8;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // btnExpense
+            // 
+            btnExpense.FlatAppearance.BorderSize = 0;
+            btnExpense.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnExpense.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnExpense.FlatStyle = FlatStyle.Flat;
+            btnExpense.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExpense.ForeColor = SystemColors.ButtonHighlight;
+            btnExpense.Image = Properties.Resources.expense;
+            btnExpense.ImageAlign = ContentAlignment.MiddleLeft;
+            btnExpense.Location = new Point(12, 419);
+            btnExpense.Name = "btnExpense";
+            btnExpense.Size = new Size(239, 50);
+            btnExpense.TabIndex = 7;
+            btnExpense.Text = "Expense";
+            btnExpense.UseVisualStyleBackColor = true;
+            // 
+            // btnIncome
+            // 
+            btnIncome.FlatAppearance.BorderSize = 0;
+            btnIncome.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnIncome.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnIncome.FlatStyle = FlatStyle.Flat;
+            btnIncome.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIncome.ForeColor = SystemColors.ButtonHighlight;
+            btnIncome.Image = Properties.Resources.income;
+            btnIncome.ImageAlign = ContentAlignment.MiddleLeft;
+            btnIncome.Location = new Point(12, 363);
+            btnIncome.Name = "btnIncome";
+            btnIncome.Size = new Size(239, 50);
+            btnIncome.TabIndex = 6;
+            btnIncome.Text = "Income";
+            btnIncome.UseVisualStyleBackColor = true;
+            // 
+            // btnCategory
+            // 
+            btnCategory.FlatAppearance.BorderSize = 0;
+            btnCategory.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnCategory.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnCategory.FlatStyle = FlatStyle.Flat;
+            btnCategory.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCategory.ForeColor = SystemColors.ButtonHighlight;
+            btnCategory.Image = Properties.Resources.category;
+            btnCategory.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCategory.Location = new Point(12, 307);
+            btnCategory.Name = "btnCategory";
+            btnCategory.Size = new Size(239, 50);
+            btnCategory.TabIndex = 5;
+            btnCategory.Text = "Add Category";
+            btnCategory.UseVisualStyleBackColor = true;
             // 
             // btnDashboard
             // 
@@ -142,7 +214,6 @@
             lblWelcome.Size = new Size(93, 21);
             lblWelcome.TabIndex = 2;
             lblWelcome.Text = "Welcome,";
-            lblWelcome.Click += lblWelcome_Click;
             // 
             // pbMainProfilePic
             // 
@@ -153,62 +224,20 @@
             pbMainProfilePic.TabIndex = 2;
             pbMainProfilePic.TabStop = false;
             // 
-            // btnCategory
+            // pnlMain
             // 
-            btnCategory.FlatAppearance.BorderSize = 0;
-            btnCategory.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnCategory.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnCategory.FlatStyle = FlatStyle.Flat;
-            btnCategory.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCategory.ForeColor = SystemColors.ButtonHighlight;
-            btnCategory.Image = Properties.Resources.category;
-            btnCategory.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCategory.Location = new Point(12, 307);
-            btnCategory.Name = "btnCategory";
-            btnCategory.Size = new Size(239, 50);
-            btnCategory.TabIndex = 5;
-            btnCategory.Text = "Add Category";
-            btnCategory.UseVisualStyleBackColor = true;
-            // 
-            // btnExpense
-            // 
-            btnExpense.FlatAppearance.BorderSize = 0;
-            btnExpense.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnExpense.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnExpense.FlatStyle = FlatStyle.Flat;
-            btnExpense.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExpense.ForeColor = SystemColors.ButtonHighlight;
-            btnExpense.Image = Properties.Resources.expense;
-            btnExpense.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExpense.Location = new Point(12, 419);
-            btnExpense.Name = "btnExpense";
-            btnExpense.Size = new Size(239, 50);
-            btnExpense.TabIndex = 7;
-            btnExpense.Text = "Dashboard";
-            btnExpense.UseVisualStyleBackColor = true;
-            // 
-            // btnIncome
-            // 
-            btnIncome.FlatAppearance.BorderSize = 0;
-            btnIncome.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnIncome.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnIncome.FlatStyle = FlatStyle.Flat;
-            btnIncome.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnIncome.ForeColor = SystemColors.ButtonHighlight;
-            btnIncome.Image = Properties.Resources.income;
-            btnIncome.ImageAlign = ContentAlignment.MiddleLeft;
-            btnIncome.Location = new Point(12, 363);
-            btnIncome.Name = "btnIncome";
-            btnIncome.Size = new Size(239, 50);
-            btnIncome.TabIndex = 6;
-            btnIncome.Text = "Income";
-            btnIncome.UseVisualStyleBackColor = true;
+            pnlMain.Dock = DockStyle.Fill;
+            pnlMain.Location = new Point(265, 60);
+            pnlMain.Name = "pnlMain";
+            pnlMain.Size = new Size(1235, 740);
+            pnlMain.TabIndex = 2;
             // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1500, 800);
+            Controls.Add(pnlMain);
             Controls.Add(pnlSideMainPage);
             Controls.Add(pnlHeaderMainPage);
             FormBorderStyle = FormBorderStyle.None;
@@ -238,5 +267,7 @@
         private Button btnExpense;
         private Button btnIncome;
         private Button btnCategory;
+        private Button btnLogout;
+        private Panel pnlMain;
     }
 }
