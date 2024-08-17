@@ -32,34 +32,48 @@
             lblIncomeData = new Label();
             pnlDbIncome4 = new Panel();
             lblIncomeData4 = new Label();
+            lblIncomeDataYearIncome = new Label();
             pbDbIncome4 = new PictureBox();
             pnlDbIncome3 = new Panel();
             lblIncomeData3 = new Label();
+            lblIncomeDataMonthIncome = new Label();
             pbDbIncome3 = new PictureBox();
             pnlDbIncome2 = new Panel();
             lblIncomeData2 = new Label();
+            lblIncomeDataYesterdayIncome = new Label();
             pbDbIncome2 = new PictureBox();
             pnlDbIncome1 = new Panel();
             lblIncomeData1 = new Label();
+            lblIncomeDataTodayIncome = new Label();
             pbDbIncome1 = new PictureBox();
             pnlDbExpense = new Panel();
             lblExpenseData = new Label();
             pnlDbExpense4 = new Panel();
             lblExpenseData4 = new Label();
+            lblIncomeDataYearExpense = new Label();
             pbDbExpense4 = new PictureBox();
             pnlDbExpense3 = new Panel();
             lblExpenseData3 = new Label();
+            lblIncomeDataMonthExpense = new Label();
             pbDbExpense3 = new PictureBox();
             pnlDbExpense2 = new Panel();
             lblExpenseData2 = new Label();
+            lblIncomeDataYesterdayExpense = new Label();
             pbDbExpense2 = new PictureBox();
             pnlDbExpense1 = new Panel();
             lblExpenseData1 = new Label();
+            lblIncomeDataTodayExpense = new Label();
             pbDbExpense1 = new PictureBox();
             pnlDbIncomeTotal = new Panel();
-            lblIncomeDataDb = new Label();
+            lblTotalIcome = new Label();
             pnlDbExpenseTotal = new Panel();
-            lblExpenseDataDb = new Label();
+            lblTotalExpense = new Label();
+            pnlDbIncomeTotal2 = new Panel();
+            lblIncomeTotal = new Label();
+            pbTotalIncome = new PictureBox();
+            pnlDbExpenseTotal2 = new Panel();
+            lblExpenseTotal = new Label();
+            pbTotalExpense = new PictureBox();
             pnlDbIncome.SuspendLayout();
             pnlDbIncome4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbDbIncome4).BeginInit();
@@ -80,6 +94,10 @@
             ((System.ComponentModel.ISupportInitialize)pbDbExpense1).BeginInit();
             pnlDbIncomeTotal.SuspendLayout();
             pnlDbExpenseTotal.SuspendLayout();
+            pnlDbIncomeTotal2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbTotalIncome).BeginInit();
+            pnlDbExpenseTotal2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbTotalExpense).BeginInit();
             SuspendLayout();
             // 
             // pnlDbIncome
@@ -109,6 +127,7 @@
             // 
             pnlDbIncome4.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome4.Controls.Add(lblIncomeData4);
+            pnlDbIncome4.Controls.Add(lblIncomeDataYearIncome);
             pnlDbIncome4.Controls.Add(pbDbIncome4);
             pnlDbIncome4.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome4.Location = new Point(897, 66);
@@ -119,13 +138,24 @@
             // lblIncomeData4
             // 
             lblIncomeData4.AutoSize = true;
-            lblIncomeData4.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeData4.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblIncomeData4.ForeColor = SystemColors.ButtonHighlight;
-            lblIncomeData4.Location = new Point(90, 37);
+            lblIncomeData4.Location = new Point(90, 82);
             lblIncomeData4.Name = "lblIncomeData4";
-            lblIncomeData4.Size = new Size(21, 21);
-            lblIncomeData4.TabIndex = 6;
-            lblIncomeData4.Text = "0";
+            lblIncomeData4.Size = new Size(130, 25);
+            lblIncomeData4.TabIndex = 7;
+            lblIncomeData4.Text = "Yearly Income";
+            // 
+            // lblIncomeDataYearIncome
+            // 
+            lblIncomeDataYearIncome.AutoSize = true;
+            lblIncomeDataYearIncome.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataYearIncome.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataYearIncome.Location = new Point(90, 37);
+            lblIncomeDataYearIncome.Name = "lblIncomeDataYearIncome";
+            lblIncomeDataYearIncome.Size = new Size(21, 21);
+            lblIncomeDataYearIncome.TabIndex = 6;
+            lblIncomeDataYearIncome.Text = "0";
             // 
             // pbDbIncome4
             // 
@@ -139,6 +169,7 @@
             // 
             pnlDbIncome3.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome3.Controls.Add(lblIncomeData3);
+            pnlDbIncome3.Controls.Add(lblIncomeDataMonthIncome);
             pnlDbIncome3.Controls.Add(pbDbIncome3);
             pnlDbIncome3.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome3.Location = new Point(609, 66);
@@ -149,13 +180,24 @@
             // lblIncomeData3
             // 
             lblIncomeData3.AutoSize = true;
-            lblIncomeData3.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeData3.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblIncomeData3.ForeColor = SystemColors.ButtonHighlight;
-            lblIncomeData3.Location = new Point(89, 37);
+            lblIncomeData3.Location = new Point(89, 82);
             lblIncomeData3.Name = "lblIncomeData3";
-            lblIncomeData3.Size = new Size(21, 21);
-            lblIncomeData3.TabIndex = 6;
-            lblIncomeData3.Text = "0";
+            lblIncomeData3.Size = new Size(143, 25);
+            lblIncomeData3.TabIndex = 7;
+            lblIncomeData3.Text = "Monthly Income";
+            // 
+            // lblIncomeDataMonthIncome
+            // 
+            lblIncomeDataMonthIncome.AutoSize = true;
+            lblIncomeDataMonthIncome.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataMonthIncome.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataMonthIncome.Location = new Point(89, 37);
+            lblIncomeDataMonthIncome.Name = "lblIncomeDataMonthIncome";
+            lblIncomeDataMonthIncome.Size = new Size(21, 21);
+            lblIncomeDataMonthIncome.TabIndex = 6;
+            lblIncomeDataMonthIncome.Text = "0";
             // 
             // pbDbIncome3
             // 
@@ -169,6 +211,7 @@
             // 
             pnlDbIncome2.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome2.Controls.Add(lblIncomeData2);
+            pnlDbIncome2.Controls.Add(lblIncomeDataYesterdayIncome);
             pnlDbIncome2.Controls.Add(pbDbIncome2);
             pnlDbIncome2.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome2.Location = new Point(314, 66);
@@ -179,13 +222,24 @@
             // lblIncomeData2
             // 
             lblIncomeData2.AutoSize = true;
-            lblIncomeData2.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeData2.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblIncomeData2.ForeColor = SystemColors.ButtonHighlight;
-            lblIncomeData2.Location = new Point(88, 37);
+            lblIncomeData2.Location = new Point(88, 82);
             lblIncomeData2.Name = "lblIncomeData2";
-            lblIncomeData2.Size = new Size(21, 21);
-            lblIncomeData2.TabIndex = 6;
-            lblIncomeData2.Text = "0";
+            lblIncomeData2.Size = new Size(176, 25);
+            lblIncomeData2.TabIndex = 7;
+            lblIncomeData2.Text = "Yesterday's Income";
+            // 
+            // lblIncomeDataYesterdayIncome
+            // 
+            lblIncomeDataYesterdayIncome.AutoSize = true;
+            lblIncomeDataYesterdayIncome.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataYesterdayIncome.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataYesterdayIncome.Location = new Point(88, 37);
+            lblIncomeDataYesterdayIncome.Name = "lblIncomeDataYesterdayIncome";
+            lblIncomeDataYesterdayIncome.Size = new Size(21, 21);
+            lblIncomeDataYesterdayIncome.TabIndex = 6;
+            lblIncomeDataYesterdayIncome.Text = "0";
             // 
             // pbDbIncome2
             // 
@@ -199,6 +253,7 @@
             // 
             pnlDbIncome1.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome1.Controls.Add(lblIncomeData1);
+            pnlDbIncome1.Controls.Add(lblIncomeDataTodayIncome);
             pnlDbIncome1.Controls.Add(pbDbIncome1);
             pnlDbIncome1.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbIncome1.Location = new Point(26, 66);
@@ -209,13 +264,24 @@
             // lblIncomeData1
             // 
             lblIncomeData1.AutoSize = true;
-            lblIncomeData1.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeData1.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblIncomeData1.ForeColor = SystemColors.ButtonHighlight;
-            lblIncomeData1.Location = new Point(86, 37);
+            lblIncomeData1.Location = new Point(86, 86);
             lblIncomeData1.Name = "lblIncomeData1";
-            lblIncomeData1.Size = new Size(21, 21);
-            lblIncomeData1.TabIndex = 5;
-            lblIncomeData1.Text = "0";
+            lblIncomeData1.Size = new Size(142, 25);
+            lblIncomeData1.TabIndex = 6;
+            lblIncomeData1.Text = "Today's Income";
+            // 
+            // lblIncomeDataTodayIncome
+            // 
+            lblIncomeDataTodayIncome.AutoSize = true;
+            lblIncomeDataTodayIncome.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataTodayIncome.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataTodayIncome.Location = new Point(86, 37);
+            lblIncomeDataTodayIncome.Name = "lblIncomeDataTodayIncome";
+            lblIncomeDataTodayIncome.Size = new Size(21, 21);
+            lblIncomeDataTodayIncome.TabIndex = 5;
+            lblIncomeDataTodayIncome.Text = "0";
             // 
             // pbDbIncome1
             // 
@@ -253,6 +319,7 @@
             // 
             pnlDbExpense4.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense4.Controls.Add(lblExpenseData4);
+            pnlDbExpense4.Controls.Add(lblIncomeDataYearExpense);
             pnlDbExpense4.Controls.Add(pbDbExpense4);
             pnlDbExpense4.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense4.Location = new Point(897, 64);
@@ -263,13 +330,24 @@
             // lblExpenseData4
             // 
             lblExpenseData4.AutoSize = true;
-            lblExpenseData4.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpenseData4.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExpenseData4.ForeColor = SystemColors.ButtonHighlight;
-            lblExpenseData4.Location = new Point(90, 35);
+            lblExpenseData4.Location = new Point(90, 80);
             lblExpenseData4.Name = "lblExpenseData4";
-            lblExpenseData4.Size = new Size(21, 21);
-            lblExpenseData4.TabIndex = 6;
-            lblExpenseData4.Text = "0";
+            lblExpenseData4.Size = new Size(130, 25);
+            lblExpenseData4.TabIndex = 7;
+            lblExpenseData4.Text = "Yearly Income";
+            // 
+            // lblIncomeDataYearExpense
+            // 
+            lblIncomeDataYearExpense.AutoSize = true;
+            lblIncomeDataYearExpense.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataYearExpense.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataYearExpense.Location = new Point(90, 35);
+            lblIncomeDataYearExpense.Name = "lblIncomeDataYearExpense";
+            lblIncomeDataYearExpense.Size = new Size(21, 21);
+            lblIncomeDataYearExpense.TabIndex = 6;
+            lblIncomeDataYearExpense.Text = "0";
             // 
             // pbDbExpense4
             // 
@@ -283,6 +361,7 @@
             // 
             pnlDbExpense3.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense3.Controls.Add(lblExpenseData3);
+            pnlDbExpense3.Controls.Add(lblIncomeDataMonthExpense);
             pnlDbExpense3.Controls.Add(pbDbExpense3);
             pnlDbExpense3.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense3.Location = new Point(609, 64);
@@ -293,13 +372,24 @@
             // lblExpenseData3
             // 
             lblExpenseData3.AutoSize = true;
-            lblExpenseData3.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpenseData3.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExpenseData3.ForeColor = SystemColors.ButtonHighlight;
-            lblExpenseData3.Location = new Point(89, 35);
+            lblExpenseData3.Location = new Point(89, 80);
             lblExpenseData3.Name = "lblExpenseData3";
-            lblExpenseData3.Size = new Size(21, 21);
-            lblExpenseData3.TabIndex = 6;
-            lblExpenseData3.Text = "0";
+            lblExpenseData3.Size = new Size(143, 25);
+            lblExpenseData3.TabIndex = 7;
+            lblExpenseData3.Text = "Monthly Income";
+            // 
+            // lblIncomeDataMonthExpense
+            // 
+            lblIncomeDataMonthExpense.AutoSize = true;
+            lblIncomeDataMonthExpense.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataMonthExpense.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataMonthExpense.Location = new Point(89, 35);
+            lblIncomeDataMonthExpense.Name = "lblIncomeDataMonthExpense";
+            lblIncomeDataMonthExpense.Size = new Size(21, 21);
+            lblIncomeDataMonthExpense.TabIndex = 6;
+            lblIncomeDataMonthExpense.Text = "0";
             // 
             // pbDbExpense3
             // 
@@ -313,6 +403,7 @@
             // 
             pnlDbExpense2.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense2.Controls.Add(lblExpenseData2);
+            pnlDbExpense2.Controls.Add(lblIncomeDataYesterdayExpense);
             pnlDbExpense2.Controls.Add(pbDbExpense2);
             pnlDbExpense2.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense2.Location = new Point(314, 64);
@@ -323,13 +414,24 @@
             // lblExpenseData2
             // 
             lblExpenseData2.AutoSize = true;
-            lblExpenseData2.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpenseData2.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExpenseData2.ForeColor = SystemColors.ButtonHighlight;
-            lblExpenseData2.Location = new Point(88, 35);
+            lblExpenseData2.Location = new Point(88, 80);
             lblExpenseData2.Name = "lblExpenseData2";
-            lblExpenseData2.Size = new Size(21, 21);
-            lblExpenseData2.TabIndex = 6;
-            lblExpenseData2.Text = "0";
+            lblExpenseData2.Size = new Size(160, 21);
+            lblExpenseData2.TabIndex = 7;
+            lblExpenseData2.Text = "Yesterday's Expense";
+            // 
+            // lblIncomeDataYesterdayExpense
+            // 
+            lblIncomeDataYesterdayExpense.AutoSize = true;
+            lblIncomeDataYesterdayExpense.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataYesterdayExpense.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataYesterdayExpense.Location = new Point(88, 35);
+            lblIncomeDataYesterdayExpense.Name = "lblIncomeDataYesterdayExpense";
+            lblIncomeDataYesterdayExpense.Size = new Size(21, 21);
+            lblIncomeDataYesterdayExpense.TabIndex = 6;
+            lblIncomeDataYesterdayExpense.Text = "0";
             // 
             // pbDbExpense2
             // 
@@ -343,6 +445,7 @@
             // 
             pnlDbExpense1.BackColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense1.Controls.Add(lblExpenseData1);
+            pnlDbExpense1.Controls.Add(lblIncomeDataTodayExpense);
             pnlDbExpense1.Controls.Add(pbDbExpense1);
             pnlDbExpense1.ForeColor = Color.FromArgb(16, 97, 40);
             pnlDbExpense1.Location = new Point(26, 64);
@@ -353,13 +456,24 @@
             // lblExpenseData1
             // 
             lblExpenseData1.AutoSize = true;
-            lblExpenseData1.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpenseData1.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblExpenseData1.ForeColor = SystemColors.ButtonHighlight;
-            lblExpenseData1.Location = new Point(86, 35);
+            lblExpenseData1.Location = new Point(86, 80);
             lblExpenseData1.Name = "lblExpenseData1";
-            lblExpenseData1.Size = new Size(21, 21);
-            lblExpenseData1.TabIndex = 6;
-            lblExpenseData1.Text = "0";
+            lblExpenseData1.Size = new Size(150, 25);
+            lblExpenseData1.TabIndex = 7;
+            lblExpenseData1.Text = "Today's Expense";
+            // 
+            // lblIncomeDataTodayExpense
+            // 
+            lblIncomeDataTodayExpense.AutoSize = true;
+            lblIncomeDataTodayExpense.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeDataTodayExpense.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeDataTodayExpense.Location = new Point(86, 35);
+            lblIncomeDataTodayExpense.Name = "lblIncomeDataTodayExpense";
+            lblIncomeDataTodayExpense.Size = new Size(21, 21);
+            lblIncomeDataTodayExpense.TabIndex = 6;
+            lblIncomeDataTodayExpense.Text = "0";
             // 
             // pbDbExpense1
             // 
@@ -372,41 +486,103 @@
             // pnlDbIncomeTotal
             // 
             pnlDbIncomeTotal.BackColor = SystemColors.ButtonHighlight;
-            pnlDbIncomeTotal.Controls.Add(lblIncomeDataDb);
+            pnlDbIncomeTotal.Controls.Add(pnlDbIncomeTotal2);
+            pnlDbIncomeTotal.Controls.Add(lblTotalIcome);
             pnlDbIncomeTotal.Location = new Point(46, 508);
             pnlDbIncomeTotal.Name = "pnlDbIncomeTotal";
             pnlDbIncomeTotal.Size = new Size(558, 210);
             pnlDbIncomeTotal.TabIndex = 2;
             // 
-            // lblIncomeDataDb
+            // lblTotalIcome
             // 
-            lblIncomeDataDb.AutoSize = true;
-            lblIncomeDataDb.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIncomeDataDb.Location = new Point(10, 13);
-            lblIncomeDataDb.Name = "lblIncomeDataDb";
-            lblIncomeDataDb.Size = new Size(131, 23);
-            lblIncomeDataDb.TabIndex = 5;
-            lblIncomeDataDb.Text = "Income's Data";
+            lblTotalIcome.AutoSize = true;
+            lblTotalIcome.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalIcome.Location = new Point(10, 13);
+            lblTotalIcome.Name = "lblTotalIcome";
+            lblTotalIcome.Size = new Size(119, 23);
+            lblTotalIcome.TabIndex = 5;
+            lblTotalIcome.Text = "Total Income";
             // 
             // pnlDbExpenseTotal
             // 
             pnlDbExpenseTotal.BackColor = SystemColors.ButtonHighlight;
-            pnlDbExpenseTotal.Controls.Add(lblExpenseDataDb);
+            pnlDbExpenseTotal.Controls.Add(pnlDbExpenseTotal2);
+            pnlDbExpenseTotal.Controls.Add(lblTotalExpense);
             pnlDbExpenseTotal.Location = new Point(629, 508);
             pnlDbExpenseTotal.Name = "pnlDbExpenseTotal";
             pnlDbExpenseTotal.Size = new Size(558, 210);
             pnlDbExpenseTotal.TabIndex = 3;
             // 
-            // lblExpenseDataDb
+            // lblTotalExpense
             // 
-            lblExpenseDataDb.AutoSize = true;
-            lblExpenseDataDb.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblExpenseDataDb.Location = new Point(13, 13);
-            lblExpenseDataDb.Name = "lblExpenseDataDb";
-            lblExpenseDataDb.RightToLeft = RightToLeft.No;
-            lblExpenseDataDb.Size = new Size(141, 23);
-            lblExpenseDataDb.TabIndex = 6;
-            lblExpenseDataDb.Text = "Expense's Data";
+            lblTotalExpense.AutoSize = true;
+            lblTotalExpense.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalExpense.Location = new Point(13, 13);
+            lblTotalExpense.Name = "lblTotalExpense";
+            lblTotalExpense.RightToLeft = RightToLeft.No;
+            lblTotalExpense.Size = new Size(129, 23);
+            lblTotalExpense.TabIndex = 6;
+            lblTotalExpense.Text = "Total Expense";
+            // 
+            // pnlDbIncomeTotal2
+            // 
+            pnlDbIncomeTotal2.BackColor = Color.FromArgb(16, 97, 40);
+            pnlDbIncomeTotal2.Controls.Add(lblIncomeTotal);
+            pnlDbIncomeTotal2.Controls.Add(pbTotalIncome);
+            pnlDbIncomeTotal2.ForeColor = Color.FromArgb(16, 97, 40);
+            pnlDbIncomeTotal2.Location = new Point(10, 53);
+            pnlDbIncomeTotal2.Name = "pnlDbIncomeTotal2";
+            pnlDbIncomeTotal2.Size = new Size(526, 140);
+            pnlDbIncomeTotal2.TabIndex = 6;
+            // 
+            // lblIncomeTotal
+            // 
+            lblIncomeTotal.AutoSize = true;
+            lblIncomeTotal.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncomeTotal.ForeColor = SystemColors.ButtonHighlight;
+            lblIncomeTotal.Location = new Point(86, 35);
+            lblIncomeTotal.Name = "lblIncomeTotal";
+            lblIncomeTotal.Size = new Size(21, 21);
+            lblIncomeTotal.TabIndex = 6;
+            lblIncomeTotal.Text = "0";
+            // 
+            // pbTotalIncome
+            // 
+            pbTotalIncome.Location = new Point(10, 35);
+            pbTotalIncome.Name = "pbTotalIncome";
+            pbTotalIncome.Size = new Size(70, 70);
+            pbTotalIncome.TabIndex = 1;
+            pbTotalIncome.TabStop = false;
+            // 
+            // pnlDbExpenseTotal2
+            // 
+            pnlDbExpenseTotal2.BackColor = Color.FromArgb(16, 97, 40);
+            pnlDbExpenseTotal2.Controls.Add(lblExpenseTotal);
+            pnlDbExpenseTotal2.Controls.Add(pbTotalExpense);
+            pnlDbExpenseTotal2.ForeColor = Color.FromArgb(16, 97, 40);
+            pnlDbExpenseTotal2.Location = new Point(13, 53);
+            pnlDbExpenseTotal2.Name = "pnlDbExpenseTotal2";
+            pnlDbExpenseTotal2.Size = new Size(526, 140);
+            pnlDbExpenseTotal2.TabIndex = 7;
+            // 
+            // lblExpenseTotal
+            // 
+            lblExpenseTotal.AutoSize = true;
+            lblExpenseTotal.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblExpenseTotal.ForeColor = SystemColors.ButtonHighlight;
+            lblExpenseTotal.Location = new Point(86, 35);
+            lblExpenseTotal.Name = "lblExpenseTotal";
+            lblExpenseTotal.Size = new Size(21, 21);
+            lblExpenseTotal.TabIndex = 6;
+            lblExpenseTotal.Text = "0";
+            // 
+            // pbTotalExpense
+            // 
+            pbTotalExpense.Location = new Point(10, 35);
+            pbTotalExpense.Name = "pbTotalExpense";
+            pbTotalExpense.Size = new Size(70, 70);
+            pbTotalExpense.TabIndex = 1;
+            pbTotalExpense.TabStop = false;
             // 
             // Dashboard
             // 
@@ -450,6 +626,12 @@
             pnlDbIncomeTotal.PerformLayout();
             pnlDbExpenseTotal.ResumeLayout(false);
             pnlDbExpenseTotal.PerformLayout();
+            pnlDbIncomeTotal2.ResumeLayout(false);
+            pnlDbIncomeTotal2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbTotalIncome).EndInit();
+            pnlDbExpenseTotal2.ResumeLayout(false);
+            pnlDbExpenseTotal2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbTotalExpense).EndInit();
             ResumeLayout(false);
         }
 
@@ -469,8 +651,8 @@
         private Label lblExpenseData;
         private Panel pnlDbIncomeTotal;
         private Panel pnlDbExpenseTotal;
-        private Label lblIncomeDataDb;
-        private Label lblExpenseDataDb;
+        private Label lblTotalIcome;
+        private Label lblTotalExpense;
         private PictureBox pbDbIncome1;
         private PictureBox pbDbIncome3;
         private PictureBox pbDbIncome2;
@@ -479,6 +661,14 @@
         private PictureBox pbDbExpense3;
         private PictureBox pbDbExpense2;
         private PictureBox pbDbExpense1;
+        private Label lblIncomeDataTodayIncome;
+        private Label lblIncomeDataYearIncome;
+        private Label lblIncomeDataMonthIncome;
+        private Label lblIncomeDataYesterdayIncome;
+        private Label lblIncomeDataYearExpense;
+        private Label lblIncomeDataMonthExpense;
+        private Label lblIncomeDataYesterdayExpense;
+        private Label lblIncomeDataTodayExpense;
         private Label lblIncomeData1;
         private Label lblIncomeData4;
         private Label lblIncomeData3;
@@ -487,5 +677,11 @@
         private Label lblExpenseData3;
         private Label lblExpenseData2;
         private Label lblExpenseData1;
+        private Panel pnlDbIncomeTotal2;
+        private Label lblIncomeTotal;
+        private PictureBox pbTotalIncome;
+        private Panel pnlDbExpenseTotal2;
+        private Label lblExpenseTotal;
+        private PictureBox pbTotalExpense;
     }
 }
