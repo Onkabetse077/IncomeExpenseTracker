@@ -1,9 +1,13 @@
-SignIn-Page
+SignIn/Up-Page
 
 Green:16, 97, 40
-BTN SignIn :33,97,16 (Hover)
+BTN  :33,97,16 (Hover)
 
 MainPage
 Green:16, 97, 40
 BTN SignIn :33,97,16 (Hover)
+
+Dashboard
+
+Green:16, 97, 40
 
