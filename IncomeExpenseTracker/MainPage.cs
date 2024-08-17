@@ -16,5 +16,20 @@ namespace IncomeExpenseTracker
         {
             InitializeComponent();
         }
+
+        private void signupPageExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblIncomExpenseTracker_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
