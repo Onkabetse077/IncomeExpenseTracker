@@ -42,10 +42,13 @@
             lblWelcome = new Label();
             pbMainProfilePic = new PictureBox();
             pnlMain = new Panel();
+            category_Main = new Category();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             pnlHeaderMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlSideMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbMainProfilePic).BeginInit();
+            pnlMain.SuspendLayout();
             SuspendLayout();
             // 
             // pnlHeaderMainPage
@@ -226,11 +229,20 @@
             // 
             // pnlMain
             // 
+            pnlMain.Controls.Add(category_Main);
             pnlMain.Dock = DockStyle.Fill;
             pnlMain.Location = new Point(265, 60);
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(1235, 740);
             pnlMain.TabIndex = 2;
+            // 
+            // category_Main
+            // 
+            category_Main.Dock = DockStyle.Fill;
+            category_Main.Location = new Point(0, 0);
+            category_Main.Name = "category_Main";
+            category_Main.Size = new Size(1235, 740);
+            category_Main.TabIndex = 0;
             // 
             // MainPage
             // 
@@ -250,6 +262,7 @@
             pnlSideMainPage.ResumeLayout(false);
             pnlSideMainPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbMainProfilePic).EndInit();
+            pnlMain.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -269,5 +282,7 @@
         private Button btnCategory;
         private Button btnLogout;
         private Panel pnlMain;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Category category_Main;
     }
 }
