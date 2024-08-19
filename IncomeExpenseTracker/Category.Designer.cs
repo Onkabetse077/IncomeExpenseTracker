@@ -28,8 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             pnlCategory1_Category = new Panel();
+            btnDelete_Category = new Button();
+            btnClear_Category = new Button();
+            btnUpdate_Category = new Button();
+            btnAdd_Category = new Button();
             cbStatus_Category = new ComboBox();
             lblStatus_Category = new Label();
             cbType_Category = new ComboBox();
@@ -37,12 +41,8 @@
             tbCategory_Category = new TextBox();
             lblCategory_Category = new Label();
             pnlCategory2_Category = new Panel();
-            btnAdd_Category = new Button();
-            btnUpdate_Category = new Button();
-            btnDelete_Category = new Button();
-            btnClear_Category = new Button();
-            dgvCategoriesList_Category = new DataGridView();
             lblCatogoriesList_Category = new Label();
+            dgvCategoriesList_Category = new DataGridView();
             pnlCategory1_Category.SuspendLayout();
             pnlCategory2_Category.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCategoriesList_Category).BeginInit();
@@ -64,6 +64,63 @@
             pnlCategory1_Category.Name = "pnlCategory1_Category";
             pnlCategory1_Category.Size = new Size(368, 693);
             pnlCategory1_Category.TabIndex = 0;
+            // 
+            // btnDelete_Category
+            // 
+            btnDelete_Category.BackColor = Color.FromArgb(16, 97, 40);
+            btnDelete_Category.FlatAppearance.BorderSize = 0;
+            btnDelete_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnDelete_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnDelete_Category.FlatStyle = FlatStyle.Flat;
+            btnDelete_Category.Location = new Point(213, 437);
+            btnDelete_Category.Name = "btnDelete_Category";
+            btnDelete_Category.Size = new Size(135, 54);
+            btnDelete_Category.TabIndex = 9;
+            btnDelete_Category.Text = "Delete";
+            btnDelete_Category.UseVisualStyleBackColor = false;
+            // 
+            // btnClear_Category
+            // 
+            btnClear_Category.BackColor = Color.FromArgb(16, 97, 40);
+            btnClear_Category.FlatAppearance.BorderSize = 0;
+            btnClear_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnClear_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnClear_Category.FlatStyle = FlatStyle.Flat;
+            btnClear_Category.Location = new Point(24, 437);
+            btnClear_Category.Name = "btnClear_Category";
+            btnClear_Category.Size = new Size(135, 54);
+            btnClear_Category.TabIndex = 8;
+            btnClear_Category.Text = "Clear";
+            btnClear_Category.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate_Category
+            // 
+            btnUpdate_Category.BackColor = Color.FromArgb(16, 97, 40);
+            btnUpdate_Category.FlatAppearance.BorderSize = 0;
+            btnUpdate_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnUpdate_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnUpdate_Category.FlatStyle = FlatStyle.Flat;
+            btnUpdate_Category.Location = new Point(213, 343);
+            btnUpdate_Category.Name = "btnUpdate_Category";
+            btnUpdate_Category.Size = new Size(135, 54);
+            btnUpdate_Category.TabIndex = 7;
+            btnUpdate_Category.Text = "Update";
+            btnUpdate_Category.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd_Category
+            // 
+            btnAdd_Category.BackColor = Color.FromArgb(16, 97, 40);
+            btnAdd_Category.FlatAppearance.BorderSize = 0;
+            btnAdd_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnAdd_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnAdd_Category.FlatStyle = FlatStyle.Flat;
+            btnAdd_Category.Location = new Point(24, 343);
+            btnAdd_Category.Name = "btnAdd_Category";
+            btnAdd_Category.Size = new Size(135, 54);
+            btnAdd_Category.TabIndex = 6;
+            btnAdd_Category.Text = "Add";
+            btnAdd_Category.UseVisualStyleBackColor = false;
+            btnAdd_Category.Click += btnAdd_Category_Click;
             // 
             // cbStatus_Category
             // 
@@ -133,81 +190,6 @@
             pnlCategory2_Category.Size = new Size(798, 693);
             pnlCategory2_Category.TabIndex = 1;
             // 
-            // btnAdd_Category
-            // 
-            btnAdd_Category.BackColor = Color.FromArgb(16, 97, 40);
-            btnAdd_Category.FlatAppearance.BorderSize = 0;
-            btnAdd_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnAdd_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnAdd_Category.FlatStyle = FlatStyle.Flat;
-            btnAdd_Category.Location = new Point(24, 343);
-            btnAdd_Category.Name = "btnAdd_Category";
-            btnAdd_Category.Size = new Size(135, 54);
-            btnAdd_Category.TabIndex = 6;
-            btnAdd_Category.Text = "Add";
-            btnAdd_Category.UseVisualStyleBackColor = false;
-            // 
-            // btnUpdate_Category
-            // 
-            btnUpdate_Category.BackColor = Color.FromArgb(16, 97, 40);
-            btnUpdate_Category.FlatAppearance.BorderSize = 0;
-            btnUpdate_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnUpdate_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnUpdate_Category.FlatStyle = FlatStyle.Flat;
-            btnUpdate_Category.Location = new Point(213, 343);
-            btnUpdate_Category.Name = "btnUpdate_Category";
-            btnUpdate_Category.Size = new Size(135, 54);
-            btnUpdate_Category.TabIndex = 7;
-            btnUpdate_Category.Text = "Update";
-            btnUpdate_Category.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete_Category
-            // 
-            btnDelete_Category.BackColor = Color.FromArgb(16, 97, 40);
-            btnDelete_Category.FlatAppearance.BorderSize = 0;
-            btnDelete_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnDelete_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnDelete_Category.FlatStyle = FlatStyle.Flat;
-            btnDelete_Category.Location = new Point(213, 437);
-            btnDelete_Category.Name = "btnDelete_Category";
-            btnDelete_Category.Size = new Size(135, 54);
-            btnDelete_Category.TabIndex = 9;
-            btnDelete_Category.Text = "Delete";
-            btnDelete_Category.UseVisualStyleBackColor = false;
-            // 
-            // btnClear_Category
-            // 
-            btnClear_Category.BackColor = Color.FromArgb(16, 97, 40);
-            btnClear_Category.FlatAppearance.BorderSize = 0;
-            btnClear_Category.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnClear_Category.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnClear_Category.FlatStyle = FlatStyle.Flat;
-            btnClear_Category.Location = new Point(24, 437);
-            btnClear_Category.Name = "btnClear_Category";
-            btnClear_Category.Size = new Size(135, 54);
-            btnClear_Category.TabIndex = 8;
-            btnClear_Category.Text = "Clear";
-            btnClear_Category.UseVisualStyleBackColor = false;
-            // 
-            // dgvCategoriesList_Category
-            // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(33, 97, 16);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvCategoriesList_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvCategoriesList_Category.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategoriesList_Category.EnableHeadersVisualStyles = false;
-            dgvCategoriesList_Category.Location = new Point(12, 60);
-            dgvCategoriesList_Category.Name = "dgvCategoriesList_Category";
-            dgvCategoriesList_Category.RowHeadersVisible = false;
-            dgvCategoriesList_Category.RowHeadersWidth = 51;
-            dgvCategoriesList_Category.Size = new Size(770, 619);
-            dgvCategoriesList_Category.TabIndex = 0;
-            // 
             // lblCatogoriesList_Category
             // 
             lblCatogoriesList_Category.AutoSize = true;
@@ -217,6 +199,25 @@
             lblCatogoriesList_Category.Size = new Size(136, 25);
             lblCatogoriesList_Category.TabIndex = 1;
             lblCatogoriesList_Category.Text = "Categories List";
+            // 
+            // dgvCategoriesList_Category
+            // 
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(33, 97, 16);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvCategoriesList_Category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvCategoriesList_Category.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCategoriesList_Category.EnableHeadersVisualStyles = false;
+            dgvCategoriesList_Category.Location = new Point(12, 60);
+            dgvCategoriesList_Category.Name = "dgvCategoriesList_Category";
+            dgvCategoriesList_Category.RowHeadersVisible = false;
+            dgvCategoriesList_Category.RowHeadersWidth = 51;
+            dgvCategoriesList_Category.Size = new Size(770, 619);
+            dgvCategoriesList_Category.TabIndex = 0;
             // 
             // Category
             // 
