@@ -17,3 +17,9 @@ CREATE TABLE categories
 );
 
 SELECT * FROM categories;
+
+DELETE FROM categories WHERE id = 2;
+
+DELETE FROM categories WHERE id = 3;
+
+SELECT * FROM categories;

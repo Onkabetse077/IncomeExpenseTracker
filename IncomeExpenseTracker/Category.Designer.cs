@@ -78,6 +78,7 @@
             btnDelete_Category.TabIndex = 9;
             btnDelete_Category.Text = "Delete";
             btnDelete_Category.UseVisualStyleBackColor = false;
+            btnDelete_Category.Click += btnDelete_Category_Click;
             // 
             // btnClear_Category
             // 
@@ -92,6 +93,7 @@
             btnClear_Category.TabIndex = 8;
             btnClear_Category.Text = "Clear";
             btnClear_Category.UseVisualStyleBackColor = false;
+            btnClear_Category.Click += btnClear_Category_Click;
             // 
             // btnUpdate_Category
             // 
@@ -106,6 +108,7 @@
             btnUpdate_Category.TabIndex = 7;
             btnUpdate_Category.Text = "Update";
             btnUpdate_Category.UseVisualStyleBackColor = false;
+            btnUpdate_Category.Click += btnUpdate_Category_Click;
             // 
             // btnAdd_Category
             // 
@@ -202,6 +205,9 @@
             // 
             // dgvCategoriesList_Category
             // 
+            dgvCategoriesList_Category.AllowUserToAddRows = false;
+            dgvCategoriesList_Category.AllowUserToDeleteRows = false;
+            dgvCategoriesList_Category.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(33, 97, 16);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
@@ -214,10 +220,12 @@
             dgvCategoriesList_Category.EnableHeadersVisualStyles = false;
             dgvCategoriesList_Category.Location = new Point(12, 60);
             dgvCategoriesList_Category.Name = "dgvCategoriesList_Category";
+            dgvCategoriesList_Category.ReadOnly = true;
             dgvCategoriesList_Category.RowHeadersVisible = false;
             dgvCategoriesList_Category.RowHeadersWidth = 51;
             dgvCategoriesList_Category.Size = new Size(770, 619);
             dgvCategoriesList_Category.TabIndex = 0;
+            dgvCategoriesList_Category.CellClick += dgvCategoriesList_Category_CellClick;
             // 
             // Category
             // 
