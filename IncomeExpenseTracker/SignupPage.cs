@@ -27,7 +27,11 @@ namespace IncomeExpenseTracker
 
         private void signupPageExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Are sure you want to Exit?", "Confirmation Message", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnSigninSignup_Click(object sender, EventArgs e)

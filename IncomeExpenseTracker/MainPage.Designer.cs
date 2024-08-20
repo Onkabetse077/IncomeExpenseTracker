@@ -44,6 +44,7 @@
             pnlMain = new Panel();
             category_Main = new Category();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            income_Main = new Income();
             pnlHeaderMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlSideMainPage.SuspendLayout();
@@ -229,6 +230,7 @@
             // 
             // pnlMain
             // 
+            pnlMain.Controls.Add(income_Main);
             pnlMain.Controls.Add(category_Main);
             pnlMain.Dock = DockStyle.Fill;
             pnlMain.Location = new Point(265, 60);
@@ -243,6 +245,14 @@
             category_Main.Name = "category_Main";
             category_Main.Size = new Size(1235, 740);
             category_Main.TabIndex = 0;
+            // 
+            // income_Main
+            // 
+            income_Main.Dock = DockStyle.Fill;
+            income_Main.Location = new Point(0, 0);
+            income_Main.Name = "income_Main";
+            income_Main.Size = new Size(1235, 740);
+            income_Main.TabIndex = 9;
             // 
             // MainPage
             // 
@@ -284,5 +294,6 @@
         private Panel pnlMain;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Category category_Main;
+        private Income income_Main;
     }
 }
