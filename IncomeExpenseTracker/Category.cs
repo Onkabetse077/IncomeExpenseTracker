@@ -28,6 +28,8 @@ namespace IncomeExpenseTracker
             List<CategoryData> listData = categoryData.categoryListData();
 
             dgvCategoriesList_Category.DataSource = listData;
+
+            //dgvCategoriesList_Category.Columns["Date"].DefaultCellStyle.Format = "dd/MMM/yyyy";
         }
         private void btnAdd_Category_Click(object sender, EventArgs e)
         {
@@ -54,7 +56,7 @@ namespace IncomeExpenseTracker
                         cmd.Parameters.AddWithValue("@date_inserted", DateTime.Today.Date);
 
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Information has been succesfully Added ", "Confrimation Message!", MessageBoxButtons.OK,
+                        MessageBox.Show("Information has been succesfully Added ", "Confirmation Message!", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         clearFields();
                     }

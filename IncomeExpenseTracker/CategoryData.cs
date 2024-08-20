@@ -40,7 +40,7 @@ namespace IncomeExpenseTracker
                         categoryData.Category = reader["category"].ToString();
                         categoryData.Type = reader["type"].ToString();
                         categoryData.Status = reader["status"].ToString();
-                        categoryData.date_inserted = reader["date_inserted"].ToString();
+                        categoryData.date_inserted = ((DateTime)reader["date_inserted"]).ToString("dd/MMM/yyyy");
 
                         listData.Add(categoryData);
                     }
