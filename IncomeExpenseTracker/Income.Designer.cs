@@ -32,20 +32,20 @@
             dataGridView1 = new DataGridView();
             lblIncomeList_Income = new Label();
             pnlCategory_Income = new Panel();
+            btnDelete_Income = new Button();
+            btnClear_Income = new Button();
+            btnUpdate_Income = new Button();
+            btnAdd_Income = new Button();
+            dtpIncome_Income = new DateTimePicker();
+            lblDate_Income = new Label();
+            tbDescription_Income = new TextBox();
+            lblDescription_income = new Label();
+            tbIncome_Income = new TextBox();
+            lblIncome_Income = new Label();
             tbItem_Income = new TextBox();
             lblItem_Income = new Label();
             cbCategory_Income = new ComboBox();
             lblCatogory_Income = new Label();
-            tbIncome_Income = new TextBox();
-            lblIncome_Income = new Label();
-            tbDescription_Income = new TextBox();
-            lblDescription_income = new Label();
-            lblDate_Income = new Label();
-            dtpIncome_Income = new DateTimePicker();
-            btnUpdate_Income = new Button();
-            btnAdd_Income = new Button();
-            btnDelete_Income = new Button();
-            btnClear_Income = new Button();
             pnlIncomeList_Income.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             pnlCategory_Income.SuspendLayout();
@@ -103,6 +103,117 @@
             pnlCategory_Income.Size = new Size(1201, 298);
             pnlCategory_Income.TabIndex = 1;
             // 
+            // btnDelete_Income
+            // 
+            btnDelete_Income.BackColor = Color.FromArgb(16, 97, 40);
+            btnDelete_Income.FlatAppearance.BorderSize = 0;
+            btnDelete_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnDelete_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnDelete_Income.FlatStyle = FlatStyle.Flat;
+            btnDelete_Income.Location = new Point(830, 225);
+            btnDelete_Income.Name = "btnDelete_Income";
+            btnDelete_Income.Size = new Size(135, 54);
+            btnDelete_Income.TabIndex = 14;
+            btnDelete_Income.Text = "Delete";
+            btnDelete_Income.UseVisualStyleBackColor = false;
+            // 
+            // btnClear_Income
+            // 
+            btnClear_Income.BackColor = Color.FromArgb(16, 97, 40);
+            btnClear_Income.FlatAppearance.BorderSize = 0;
+            btnClear_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnClear_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnClear_Income.FlatStyle = FlatStyle.Flat;
+            btnClear_Income.Location = new Point(641, 225);
+            btnClear_Income.Name = "btnClear_Income";
+            btnClear_Income.Size = new Size(135, 54);
+            btnClear_Income.TabIndex = 13;
+            btnClear_Income.Text = "Clear";
+            btnClear_Income.UseVisualStyleBackColor = false;
+            // 
+            // btnUpdate_Income
+            // 
+            btnUpdate_Income.BackColor = Color.FromArgb(16, 97, 40);
+            btnUpdate_Income.FlatAppearance.BorderSize = 0;
+            btnUpdate_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnUpdate_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnUpdate_Income.FlatStyle = FlatStyle.Flat;
+            btnUpdate_Income.Location = new Point(334, 225);
+            btnUpdate_Income.Name = "btnUpdate_Income";
+            btnUpdate_Income.Size = new Size(135, 54);
+            btnUpdate_Income.TabIndex = 12;
+            btnUpdate_Income.Text = "Update";
+            btnUpdate_Income.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd_Income
+            // 
+            btnAdd_Income.BackColor = Color.FromArgb(16, 97, 40);
+            btnAdd_Income.FlatAppearance.BorderSize = 0;
+            btnAdd_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
+            btnAdd_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
+            btnAdd_Income.FlatStyle = FlatStyle.Flat;
+            btnAdd_Income.Location = new Point(145, 225);
+            btnAdd_Income.Name = "btnAdd_Income";
+            btnAdd_Income.Size = new Size(135, 54);
+            btnAdd_Income.TabIndex = 11;
+            btnAdd_Income.Text = "Add";
+            btnAdd_Income.UseVisualStyleBackColor = false;
+            btnAdd_Income.Click += btnAdd_Income_Click;
+            // 
+            // dtpIncome_Income
+            // 
+            dtpIncome_Income.Location = new Point(641, 157);
+            dtpIncome_Income.Name = "dtpIncome_Income";
+            dtpIncome_Income.Size = new Size(250, 27);
+            dtpIncome_Income.TabIndex = 10;
+            // 
+            // lblDate_Income
+            // 
+            lblDate_Income.AutoSize = true;
+            lblDate_Income.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDate_Income.Location = new Point(577, 157);
+            lblDate_Income.Name = "lblDate_Income";
+            lblDate_Income.Size = new Size(58, 25);
+            lblDate_Income.TabIndex = 9;
+            lblDate_Income.Text = "Date:";
+            // 
+            // tbDescription_Income
+            // 
+            tbDescription_Income.BorderStyle = BorderStyle.FixedSingle;
+            tbDescription_Income.Location = new Point(641, 30);
+            tbDescription_Income.Multiline = true;
+            tbDescription_Income.Name = "tbDescription_Income";
+            tbDescription_Income.Size = new Size(452, 89);
+            tbDescription_Income.TabIndex = 8;
+            // 
+            // lblDescription_income
+            // 
+            lblDescription_income.AutoSize = true;
+            lblDescription_income.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblDescription_income.Location = new Point(524, 33);
+            lblDescription_income.Name = "lblDescription_income";
+            lblDescription_income.Size = new Size(111, 25);
+            lblDescription_income.TabIndex = 7;
+            lblDescription_income.Text = "Description:";
+            // 
+            // tbIncome_Income
+            // 
+            tbIncome_Income.BorderStyle = BorderStyle.FixedSingle;
+            tbIncome_Income.Location = new Point(145, 157);
+            tbIncome_Income.Name = "tbIncome_Income";
+            tbIncome_Income.Size = new Size(263, 27);
+            tbIncome_Income.TabIndex = 6;
+            // 
+            // lblIncome_Income
+            // 
+            lblIncome_Income.AutoSize = true;
+            lblIncome_Income.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblIncome_Income.Location = new Point(61, 157);
+            lblIncome_Income.Name = "lblIncome_Income";
+            lblIncome_Income.Size = new Size(78, 25);
+            lblIncome_Income.TabIndex = 5;
+            lblIncome_Income.Text = "Income:";
+            // 
             // tbItem_Income
             // 
             tbItem_Income.BorderStyle = BorderStyle.FixedSingle;
@@ -138,116 +249,6 @@
             lblCatogory_Income.Size = new Size(91, 25);
             lblCatogory_Income.TabIndex = 1;
             lblCatogory_Income.Text = "Catagory:";
-            // 
-            // tbIncome_Income
-            // 
-            tbIncome_Income.BorderStyle = BorderStyle.FixedSingle;
-            tbIncome_Income.Location = new Point(145, 157);
-            tbIncome_Income.Name = "tbIncome_Income";
-            tbIncome_Income.Size = new Size(263, 27);
-            tbIncome_Income.TabIndex = 6;
-            // 
-            // lblIncome_Income
-            // 
-            lblIncome_Income.AutoSize = true;
-            lblIncome_Income.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblIncome_Income.Location = new Point(61, 157);
-            lblIncome_Income.Name = "lblIncome_Income";
-            lblIncome_Income.Size = new Size(78, 25);
-            lblIncome_Income.TabIndex = 5;
-            lblIncome_Income.Text = "Income:";
-            // 
-            // tbDescription_Income
-            // 
-            tbDescription_Income.BorderStyle = BorderStyle.FixedSingle;
-            tbDescription_Income.Location = new Point(641, 30);
-            tbDescription_Income.Multiline = true;
-            tbDescription_Income.Name = "tbDescription_Income";
-            tbDescription_Income.Size = new Size(452, 89);
-            tbDescription_Income.TabIndex = 8;
-            // 
-            // lblDescription_income
-            // 
-            lblDescription_income.AutoSize = true;
-            lblDescription_income.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDescription_income.Location = new Point(524, 33);
-            lblDescription_income.Name = "lblDescription_income";
-            lblDescription_income.Size = new Size(111, 25);
-            lblDescription_income.TabIndex = 7;
-            lblDescription_income.Text = "Description:";
-            // 
-            // lblDate_Income
-            // 
-            lblDate_Income.AutoSize = true;
-            lblDate_Income.Font = new Font("Comic Sans MS", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblDate_Income.Location = new Point(577, 157);
-            lblDate_Income.Name = "lblDate_Income";
-            lblDate_Income.Size = new Size(58, 25);
-            lblDate_Income.TabIndex = 9;
-            lblDate_Income.Text = "Date:";
-            // 
-            // dtpIncome_Income
-            // 
-            dtpIncome_Income.Location = new Point(641, 157);
-            dtpIncome_Income.Name = "dtpIncome_Income";
-            dtpIncome_Income.Size = new Size(250, 27);
-            dtpIncome_Income.TabIndex = 10;
-            // 
-            // btnUpdate_Income
-            // 
-            btnUpdate_Income.BackColor = Color.FromArgb(16, 97, 40);
-            btnUpdate_Income.FlatAppearance.BorderSize = 0;
-            btnUpdate_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnUpdate_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnUpdate_Income.FlatStyle = FlatStyle.Flat;
-            btnUpdate_Income.Location = new Point(334, 225);
-            btnUpdate_Income.Name = "btnUpdate_Income";
-            btnUpdate_Income.Size = new Size(135, 54);
-            btnUpdate_Income.TabIndex = 12;
-            btnUpdate_Income.Text = "Update";
-            btnUpdate_Income.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd_Income
-            // 
-            btnAdd_Income.BackColor = Color.FromArgb(16, 97, 40);
-            btnAdd_Income.FlatAppearance.BorderSize = 0;
-            btnAdd_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnAdd_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnAdd_Income.FlatStyle = FlatStyle.Flat;
-            btnAdd_Income.Location = new Point(145, 225);
-            btnAdd_Income.Name = "btnAdd_Income";
-            btnAdd_Income.Size = new Size(135, 54);
-            btnAdd_Income.TabIndex = 11;
-            btnAdd_Income.Text = "Add";
-            btnAdd_Income.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete_Income
-            // 
-            btnDelete_Income.BackColor = Color.FromArgb(16, 97, 40);
-            btnDelete_Income.FlatAppearance.BorderSize = 0;
-            btnDelete_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnDelete_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnDelete_Income.FlatStyle = FlatStyle.Flat;
-            btnDelete_Income.Location = new Point(830, 225);
-            btnDelete_Income.Name = "btnDelete_Income";
-            btnDelete_Income.Size = new Size(135, 54);
-            btnDelete_Income.TabIndex = 14;
-            btnDelete_Income.Text = "Delete";
-            btnDelete_Income.UseVisualStyleBackColor = false;
-            // 
-            // btnClear_Income
-            // 
-            btnClear_Income.BackColor = Color.FromArgb(16, 97, 40);
-            btnClear_Income.FlatAppearance.BorderSize = 0;
-            btnClear_Income.FlatAppearance.MouseDownBackColor = Color.FromArgb(33, 97, 16);
-            btnClear_Income.FlatAppearance.MouseOverBackColor = Color.FromArgb(33, 97, 16);
-            btnClear_Income.FlatStyle = FlatStyle.Flat;
-            btnClear_Income.Location = new Point(641, 225);
-            btnClear_Income.Name = "btnClear_Income";
-            btnClear_Income.Size = new Size(135, 54);
-            btnClear_Income.TabIndex = 13;
-            btnClear_Income.Text = "Clear";
-            btnClear_Income.UseVisualStyleBackColor = false;
             // 
             // Income
             // 

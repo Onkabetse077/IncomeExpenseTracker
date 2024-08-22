@@ -29,12 +29,25 @@ namespace IncomeExpenseTracker
         private void btnLogout_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question)== DialogResult.Yes)
+                    MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 SigninPage signinPage = new SigninPage();
                 signinPage.Show();
                 this.Close();
             }
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
+            category_Main.Visible = true;
+            income_Main.Visible = false;
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            category_Main.Visible = false;
+            income_Main.Visible = true;
         }
     }
 }
