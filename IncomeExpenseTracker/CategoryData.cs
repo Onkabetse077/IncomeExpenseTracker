@@ -16,7 +16,7 @@ namespace IncomeExpenseTracker
         public string Category { set; get; }
         public string Type { set; get; }
         public string Status { set; get; }
-        public string date_inserted { set; get; }
+        public string Date_Inserted { set; get; }
 
         public List<CategoryData> categoryListData()
         {
@@ -40,7 +40,7 @@ namespace IncomeExpenseTracker
                         categoryData.Category = reader["category"].ToString();
                         categoryData.Type = reader["type"].ToString();
                         categoryData.Status = reader["status"].ToString();
-                        categoryData.date_inserted = ((DateTime)reader["date_inserted"]).ToString("dd/MMM/yyyy");
+                        categoryData.Date_Inserted = ((DateTime)reader["date_inserted"]).ToString("dd/MMM/yyyy");
 
                         listData.Add(categoryData);
                     }

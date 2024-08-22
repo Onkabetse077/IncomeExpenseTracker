@@ -40,11 +40,16 @@ namespace IncomeExpenseTracker
         private void btnDashboard_Click(object sender, EventArgs e)
         {
 
+            
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
             category_Main.Visible = true;
             income_Main.Visible = false;
         }
 
-        private void btnCategory_Click(object sender, EventArgs e)
+        private void btnIncome_Click(object sender, EventArgs e)
         {
             category_Main.Visible = false;
             income_Main.Visible = true;

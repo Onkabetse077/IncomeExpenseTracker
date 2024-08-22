@@ -162,6 +162,7 @@
             btnIncome.TabIndex = 6;
             btnIncome.Text = "Income";
             btnIncome.UseVisualStyleBackColor = true;
+            btnIncome.Click += btnIncome_Click;
             // 
             // btnCategory
             // 
