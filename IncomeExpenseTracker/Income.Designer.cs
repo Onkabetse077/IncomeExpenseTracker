@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             pnlIncomeList_Income = new Panel();
-            dataGridView1 = new DataGridView();
+            dgvIncome_Income = new DataGridView();
             lblIncomeList_Income = new Label();
             pnlCategory_Income = new Panel();
             btnDelete_Income = new Button();
@@ -47,30 +47,32 @@
             cbCategory_Income = new ComboBox();
             lblCatogory_Income = new Label();
             pnlIncomeList_Income.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvIncome_Income).BeginInit();
             pnlCategory_Income.SuspendLayout();
             SuspendLayout();
             // 
             // pnlIncomeList_Income
             // 
-            pnlIncomeList_Income.Controls.Add(dataGridView1);
+            pnlIncomeList_Income.Controls.Add(dgvIncome_Income);
             pnlIncomeList_Income.Controls.Add(lblIncomeList_Income);
             pnlIncomeList_Income.Location = new Point(18, 30);
             pnlIncomeList_Income.Name = "pnlIncomeList_Income";
             pnlIncomeList_Income.Size = new Size(1201, 375);
             pnlIncomeList_Income.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvIncome_Income
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(25, 46);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1154, 306);
-            dataGridView1.TabIndex = 1;
+            dgvIncome_Income.AllowUserToAddRows = false;
+            dgvIncome_Income.AllowUserToDeleteRows = false;
+            dgvIncome_Income.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvIncome_Income.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvIncome_Income.Location = new Point(25, 46);
+            dgvIncome_Income.Name = "dgvIncome_Income";
+            dgvIncome_Income.ReadOnly = true;
+            dgvIncome_Income.RowHeadersWidth = 51;
+            dgvIncome_Income.Size = new Size(1154, 306);
+            dgvIncome_Income.TabIndex = 1;
+            dgvIncome_Income.CellClick += dgvIncome_Income_CellClick;
             // 
             // lblIncomeList_Income
             // 
@@ -116,6 +118,7 @@
             btnDelete_Income.TabIndex = 14;
             btnDelete_Income.Text = "Delete";
             btnDelete_Income.UseVisualStyleBackColor = false;
+            btnDelete_Income.Click += btnDelete_Income_Click;
             // 
             // btnClear_Income
             // 
@@ -130,6 +133,7 @@
             btnClear_Income.TabIndex = 13;
             btnClear_Income.Text = "Clear";
             btnClear_Income.UseVisualStyleBackColor = false;
+            btnClear_Income.Click += btnClear_Income_Click;
             // 
             // btnUpdate_Income
             // 
@@ -144,6 +148,7 @@
             btnUpdate_Income.TabIndex = 12;
             btnUpdate_Income.Text = "Update";
             btnUpdate_Income.UseVisualStyleBackColor = false;
+            btnUpdate_Income.Click += btnUpdate_Income_Click;
             // 
             // btnAdd_Income
             // 
@@ -260,7 +265,7 @@
             Size = new Size(1235, 740);
             pnlIncomeList_Income.ResumeLayout(false);
             pnlIncomeList_Income.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvIncome_Income).EndInit();
             pnlCategory_Income.ResumeLayout(false);
             pnlCategory_Income.PerformLayout();
             ResumeLayout(false);
@@ -272,7 +277,7 @@
         private Panel pnlCategory_Income;
         private Label lblIncomeList_Income;
         private Label lblCatogory_Income;
-        private DataGridView dataGridView1;
+        private DataGridView dgvIncome_Income;
         private ComboBox cbCategory_Income;
         private TextBox tbItem_Income;
         private Label lblItem_Income;
