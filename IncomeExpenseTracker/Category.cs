@@ -129,6 +129,7 @@ namespace IncomeExpenseTracker
             tbCategory_Category.Text = "";
             cbType_Category.SelectedIndex = -1;
             cbStatus_Category.SelectedIndex = -1;
+            displayCategoryList();
         }
         private void btnClear_Category_Click(object sender, EventArgs e)
         {

@@ -137,10 +137,13 @@ namespace IncomeExpenseTracker
             tbItem_Income.Text = "";
             tbIncome_Income.Text = "";
             tbDescription_Income.Text = "";
+            displayIncomeList();
+            displayCategoryList();
         }
         private void btnClear_Income_Click(object sender, EventArgs e)
         {
             clearFields();
+            
         }
 
         private void btnDelete_Income_Click(object sender, EventArgs e)
@@ -180,7 +183,6 @@ namespace IncomeExpenseTracker
                     }
                 }
             }
-            displayCategoryList();
         }
     
 

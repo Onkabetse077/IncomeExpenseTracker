@@ -19,7 +19,6 @@ namespace IncomeExpenseTracker
         public string Income { set; get; }
         public string Description { set; get; }
         public string Date_Income { set; get; }
-        public string Date_Inserted { set; get; }
 
 
         public List<IncomeData> incomeListData()
@@ -46,8 +45,6 @@ namespace IncomeExpenseTracker
                         incomeData.Income = reader["income"].ToString();
                         incomeData.Description = reader["description"].ToString();
                         incomeData.Date_Income = ((DateTime)reader["date_income"]).ToString("dd/MMM/yyyy");
-                        incomeData.Date_Inserted = ((DateTime)reader["date_inserted"]).ToString("dd/MMM/yyyy");
-
                         listData.Add(incomeData);
                     }
 
