@@ -23,3 +23,15 @@ DELETE FROM categories WHERE id = 2;
 DELETE FROM categories WHERE id = 3;
 
 SELECT * FROM categories;
+
+CREATE TABLE income(
+id INT PRIMARY KEY IDENTITY(1,1),
+category VARCHAR(MAX) NULL,
+item VARCHAR(MAX) NULL,
+income FLOAT NULL,
+description TEXT NULL,
+date_income DATE NULL,
+date_inserted DATe NULL
+);
+
+SELECT * FROM income;

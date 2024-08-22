@@ -42,9 +42,9 @@
             lblWelcome = new Label();
             pbMainProfilePic = new PictureBox();
             pnlMain = new Panel();
+            income_Main = new Income();
             category_Main = new Category();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            income_Main = new Income();
             pnlHeaderMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlSideMainPage.SuspendLayout();
@@ -179,6 +179,7 @@
             btnCategory.TabIndex = 5;
             btnCategory.Text = "Add Category";
             btnCategory.UseVisualStyleBackColor = true;
+            btnCategory.Click += btnCategory_Click;
             // 
             // btnDashboard
             // 
@@ -196,6 +197,7 @@
             btnDashboard.TabIndex = 4;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // label1
             // 
@@ -238,14 +240,6 @@
             pnlMain.Size = new Size(1235, 740);
             pnlMain.TabIndex = 2;
             // 
-            // category_Main
-            // 
-            category_Main.Dock = DockStyle.Fill;
-            category_Main.Location = new Point(0, 0);
-            category_Main.Name = "category_Main";
-            category_Main.Size = new Size(1235, 740);
-            category_Main.TabIndex = 0;
-            // 
             // income_Main
             // 
             income_Main.Dock = DockStyle.Fill;
@@ -253,6 +247,14 @@
             income_Main.Name = "income_Main";
             income_Main.Size = new Size(1235, 740);
             income_Main.TabIndex = 9;
+            // 
+            // category_Main
+            // 
+            category_Main.Dock = DockStyle.Fill;
+            category_Main.Location = new Point(0, 0);
+            category_Main.Name = "category_Main";
+            category_Main.Size = new Size(1235, 740);
+            category_Main.TabIndex = 0;
             // 
             // MainPage
             // 
