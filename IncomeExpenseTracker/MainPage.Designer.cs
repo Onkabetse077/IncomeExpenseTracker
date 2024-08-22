@@ -45,6 +45,7 @@
             income_Main = new Income();
             category_Main = new Category();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            expenses_Main = new Expenses();
             pnlHeaderMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlSideMainPage.SuspendLayout();
@@ -145,6 +146,7 @@
             btnExpense.TabIndex = 7;
             btnExpense.Text = "Expense";
             btnExpense.UseVisualStyleBackColor = true;
+            btnExpense.Click += btnExpense_Click;
             // 
             // btnIncome
             // 
@@ -233,6 +235,7 @@
             // 
             // pnlMain
             // 
+            pnlMain.Controls.Add(expenses_Main);
             pnlMain.Controls.Add(income_Main);
             pnlMain.Controls.Add(category_Main);
             pnlMain.Dock = DockStyle.Fill;
@@ -256,6 +259,14 @@
             category_Main.Name = "category_Main";
             category_Main.Size = new Size(1235, 740);
             category_Main.TabIndex = 0;
+            // 
+            // expenses_Main
+            // 
+            expenses_Main.Dock = DockStyle.Fill;
+            expenses_Main.Location = new Point(0, 0);
+            expenses_Main.Name = "expenses_Main";
+            expenses_Main.Size = new Size(1235, 740);
+            expenses_Main.TabIndex = 9;
             // 
             // MainPage
             // 
@@ -298,5 +309,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Category category_Main;
         private Income income_Main;
+        private Expenses expenses_Main;
     }
 }
