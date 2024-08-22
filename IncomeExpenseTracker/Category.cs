@@ -18,10 +18,10 @@ namespace IncomeExpenseTracker
         public Category()
         {
             InitializeComponent();
-            displayCategoryList();
+            DisplayCategoryList();
         }
 
-        public void displayCategoryList()
+        public void DisplayCategoryList()
         {
             CategoryData categoryData = new CategoryData();
 
@@ -58,13 +58,13 @@ namespace IncomeExpenseTracker
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Information has been succesfully Added ", "Confirmation Message!", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                        clearFields();
+                        ClearFields();
                     }
 
                     connect.Close();
                 }
             }
-            displayCategoryList();
+            DisplayCategoryList();
 
         }
 
@@ -114,26 +114,26 @@ namespace IncomeExpenseTracker
                             MessageBox.Show("Information has been succesfully Updated", "Confrimation Message!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                            clearFields();
+                            ClearFields();
                         }
 
                         connect.Close();
                     }
                 }
             }
-            displayCategoryList();
+            DisplayCategoryList();
         }
 
-        public void clearFields()
+        public void ClearFields()
         {
             tbCategory_Category.Text = "";
             cbType_Category.SelectedIndex = -1;
             cbStatus_Category.SelectedIndex = -1;
-            displayCategoryList();
+            DisplayCategoryList();
         }
         private void btnClear_Category_Click(object sender, EventArgs e)
         {
-            clearFields();
+            ClearFields();
         }
 
         private void btnDelete_Category_Click(object sender, EventArgs e)
@@ -164,14 +164,14 @@ namespace IncomeExpenseTracker
                             MessageBox.Show("Information has been succesfully Deleted", "Confirmation Message!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
-                            clearFields();
+                            ClearFields();
                         }
 
                         connect.Close();
                     }
                 }
             }
-            displayCategoryList();
+            DisplayCategoryList();
         }
     }
 }
