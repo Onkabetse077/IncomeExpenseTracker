@@ -18,7 +18,7 @@ namespace IncomeExpenseTracker
         public string Status { set; get; }
         public string Date_Inserted { set; get; }
 
-        public List<CategoryData> categoryListData()
+        public List<CategoryData> CategoryListData()
         {
             List<CategoryData> listData = new List<CategoryData>();
 

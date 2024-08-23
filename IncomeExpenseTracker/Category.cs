@@ -25,7 +25,7 @@ namespace IncomeExpenseTracker
         {
             CategoryData categoryData = new CategoryData();
 
-            List<CategoryData> listData = categoryData.categoryListData();
+            List<CategoryData> listData = categoryData.CategoryListData();
 
             dgvCategoriesList_Category.DataSource = listData;
 
