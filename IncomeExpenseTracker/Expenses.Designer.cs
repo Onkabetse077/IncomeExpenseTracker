@@ -243,6 +243,7 @@
             dgvExpense_Expense.RowHeadersWidth = 51;
             dgvExpense_Expense.Size = new Size(1154, 306);
             dgvExpense_Expense.TabIndex = 1;
+            dgvExpense_Expense.CellClick += dgvExpense_Expense_CellClick;
             // 
             // lblExpenseList_Expense
             // 

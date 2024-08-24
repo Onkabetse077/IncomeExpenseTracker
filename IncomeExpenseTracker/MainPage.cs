@@ -39,12 +39,16 @@ namespace IncomeExpenseTracker
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            dashboard_Main.Visible = true;
+            category_Main.Visible = false;
+            income_Main.Visible = false;
+            expenses_Main.Visible = false;
 
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
+            dashboard_Main.Visible = false;
             category_Main.Visible = true;
             income_Main.Visible = false;
             expenses_Main.Visible = false;
@@ -52,6 +56,7 @@ namespace IncomeExpenseTracker
 
         private void btnIncome_Click(object sender, EventArgs e)
         {
+            dashboard_Main.Visible = false;
             category_Main.Visible = false;
             income_Main.Visible = true;
             expenses_Main.Visible = false;
@@ -59,6 +64,7 @@ namespace IncomeExpenseTracker
 
         private void btnExpense_Click(object sender, EventArgs e)
         {
+            dashboard_Main.Visible = false;
             category_Main.Visible = false;
             income_Main.Visible = false;
             expenses_Main.Visible = true;

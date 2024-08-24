@@ -117,11 +117,12 @@ namespace IncomeExpenseTracker
                 using (SqlConnection connect = new SqlConnection(connection))
                 {
                     connect.Open();
-                    string insertData =
-                        "UPDATE expense SET category = @category,item = @item,expense = @expense,description = @description,date_expense = @date_expense)";
+                    string updateData =
+                        "UPDATE expense SET category = @category,item = @item,expense = @expense,description = @description,date_expense = @date_expense WHERE id =@id)";
 
-                    using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                    using (SqlCommand cmd = new SqlCommand(updateData, connect))
                     {
+                        cmd.Parameters.AddWithValue("@id", getID);
                         cmd.Parameters.AddWithValue("@category", cbCategory_Expense.SelectedItem);
                         cmd.Parameters.AddWithValue("@item", tbItem_Expense.Text.Trim());
                         cmd.Parameters.AddWithValue("@expense", tbExpense_Expense.Text);
@@ -132,7 +133,7 @@ namespace IncomeExpenseTracker
 
                         MessageBox.Show("Information has been succesfully Updated ", "Confirmation Message!", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
-                       ClearFields();
+                        ClearFields();
                     }
 
                     connect.Close();
@@ -179,6 +180,22 @@ namespace IncomeExpenseTracker
                         connect.Close();
                     }
                 }
+            }
+        }
+
+        private void dgvExpense_Expense_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                DataGridViewRow row = dgvExpense_Expense.Rows[e.RowIndex];
+
+                getID = Convert.ToInt32(row.Cells[0].Value);
+                cbCategory_Expense.Text = row.Cells[1].Value.ToString();
+                tbItem_Expense.Text = row.Cells[2].Value.ToString();
+                tbExpense_Expense.Text = row.Cells[3].Value.ToString();
+                tbDescription_Expense.Text = row.Cells[4].Value.ToString();
+                dtpExpense_Expense.Text = row.Cells[5].Value.ToString();
+
             }
         }
     }

@@ -42,10 +42,11 @@
             lblWelcome = new Label();
             pbMainProfilePic = new PictureBox();
             pnlMain = new Panel();
+            expenses_Main = new Expenses();
             income_Main = new Income();
             category_Main = new Category();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            expenses_Main = new Expenses();
+            dashboard_Main = new Dashboard();
             pnlHeaderMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlSideMainPage.SuspendLayout();
@@ -235,6 +236,7 @@
             // 
             // pnlMain
             // 
+            pnlMain.Controls.Add(dashboard_Main);
             pnlMain.Controls.Add(expenses_Main);
             pnlMain.Controls.Add(income_Main);
             pnlMain.Controls.Add(category_Main);
@@ -243,6 +245,14 @@
             pnlMain.Name = "pnlMain";
             pnlMain.Size = new Size(1235, 740);
             pnlMain.TabIndex = 2;
+            // 
+            // expenses_Main
+            // 
+            expenses_Main.Dock = DockStyle.Fill;
+            expenses_Main.Location = new Point(0, 0);
+            expenses_Main.Name = "expenses_Main";
+            expenses_Main.Size = new Size(1235, 740);
+            expenses_Main.TabIndex = 9;
             // 
             // income_Main
             // 
@@ -260,13 +270,13 @@
             category_Main.Size = new Size(1235, 740);
             category_Main.TabIndex = 0;
             // 
-            // expenses_Main
+            // dashboard_Main
             // 
-            expenses_Main.Dock = DockStyle.Fill;
-            expenses_Main.Location = new Point(0, 0);
-            expenses_Main.Name = "expenses_Main";
-            expenses_Main.Size = new Size(1235, 740);
-            expenses_Main.TabIndex = 9;
+            dashboard_Main.Dock = DockStyle.Fill;
+            dashboard_Main.Location = new Point(0, 0);
+            dashboard_Main.Name = "dashboard_Main";
+            dashboard_Main.Size = new Size(1235, 740);
+            dashboard_Main.TabIndex = 10;
             // 
             // MainPage
             // 
@@ -310,5 +320,6 @@
         private Category category_Main;
         private Income income_Main;
         private Expenses expenses_Main;
+        private Dashboard dashboard_Main;
     }
 }
