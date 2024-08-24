@@ -118,11 +118,12 @@ namespace IncomeExpenseTracker
                 using (SqlConnection connect = new SqlConnection(connection))
                 {
                     connect.Open();
-                    string insertData =
-                        "UPDATE income SET category = @category,item = @item,income = @income,description = @description,date_income = @date_income)";
+                    string updateData =
+                        "UPDATE income SET category = @category,item = @item,income = @income,description = @description,date_income = @date_income wHERE id = @id";
 
-                    using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                    using (SqlCommand cmd = new SqlCommand(updateData, connect))
                     {
+                        cmd.Parameters.AddWithValue("@id", getID);
                         cmd.Parameters.AddWithValue("@category", cbCategory_Income.SelectedItem);
                         cmd.Parameters.AddWithValue("@item", tbItem_Income.Text.Trim());
                         cmd.Parameters.AddWithValue("@income", tbIncome_Income.Text);

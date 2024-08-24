@@ -19,6 +19,9 @@ namespace IncomeExpenseTracker
         {
             InitializeComponent();
             IncomeTodayIncome();
+            IncomeYesterdayIncome();
+            IncomeThisMonth();
+            IncomeThisYear();
         }
 
 
@@ -41,7 +44,7 @@ namespace IncomeExpenseTracker
                     {
                         decimal todayIncome = Convert.ToDecimal(results);
 
-                        lblIncomeDataTodayIncome.Text = "R" + todayIncome.ToString("0,00");
+                        lblIncomeDataTodayIncome.Text = todayIncome.ToString("C");
                     }
                     else
                     {
@@ -57,19 +60,97 @@ namespace IncomeExpenseTracker
                 connect.Open();
 
                 string query =
-                    "SELECT SUM(income) FROM income WHERE CONVERT(DATE,TIMESTAMPS) = DATEADD(day,DATEDIFF(day,0,GETDATE()),-1)";
+                    "SELECT SUM(income) FROM income WHERE CONVERT(DATE,date_income) = DATEADD(day,DATEDIFF(day,0,GETDATE()),-1)";
 
                 using (SqlCommand cmd =new SqlCommand(query,connect) )
                 {
                     object results = cmd.ExecuteScalar();
 
-                    if (results == DBNull.Value)
+                    if (results != DBNull.Value)
                     {
-                        
+                        decimal yesterdayIncome  = Convert.ToDecimal(results);
+
+                        lblIncomeDataYesterdayIncome.Text = yesterdayIncome.ToString("C");
+                    }
+                    else
+                    {
+                        lblIncomeDataYesterdayIncome.Text = "R 0,00";
                     }
                 }
             }
         }
 
+        public void IncomeThisMonth()
+        {
+            using (SqlConnection connect = new SqlConnection(connection))
+            {
+                connect.Open();
+
+                DateTime today = DateTime.Now.Date;
+                DateTime startMonth = new DateTime(today.Year, today.Month, 1);
+                DateTime endMonth = startMonth.AddMonths(1).AddDays(-1);
+
+
+                string query =
+                    "SELECT SUM(income) FROM income WHERE date_income >= @startMonth AND date_income <= @endMonth";
+
+                using (SqlCommand cmd = new SqlCommand(query, connect))
+                {
+
+                    cmd.Parameters.AddWithValue("@startMonth", startMonth);
+                    cmd.Parameters.AddWithValue("@endMonth", endMonth);
+
+                    object results = cmd.ExecuteScalar();
+
+                    if (results != DBNull.Value)
+                    {
+                        decimal MonthIncome = Convert.ToDecimal(results);
+
+                        lblIncomeDataMonthIncome.Text = MonthIncome.ToString("C");
+                    }
+                    else
+                    {
+                        lblIncomeDataMonthIncome.Text = "R 0,00";
+                    }
+                }
+            }
+
+        }
+
+        public void IncomeThisYear()
+        {
+            using (SqlConnection connect = new SqlConnection(connection))
+            {
+                connect.Open();
+
+                DateTime today = DateTime.Now.Date;
+                DateTime startYear = new DateTime(today.Year, 1, 1);
+                DateTime endYear = startYear.AddYears(1).AddDays(-1);
+
+
+                string query =
+                    "SELECT SUM(income) FROM income WHERE date_income >= @startYear AND date_income <= @endYear";
+
+                using (SqlCommand cmd = new SqlCommand(query, connect))
+                {
+
+                    cmd.Parameters.AddWithValue("@startYear", startYear);
+                    cmd.Parameters.AddWithValue("@endYear", endYear);
+                    object results = cmd.ExecuteScalar();
+
+                    if (results != DBNull.Value)
+                    {
+                        decimal yearIncome = Convert.ToDecimal(results);
+
+                        lblIncomeDataYearIncome.Text = yearIncome.ToString("C");
+                    }
+                    else
+                    {
+                        lblIncomeDataYearIncome.Text = "R 0,00";
+                    }
+                }
+            }
+            
+        }
     }
 }
