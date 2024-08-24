@@ -11,6 +11,7 @@ namespace IncomeExpenseTracker
             InitializeComponent();
         }
 
+        
         private void signinPageExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are sure you want to Exit?", "Confirmation Message", MessageBoxButtons.YesNo,
@@ -32,6 +33,7 @@ namespace IncomeExpenseTracker
             tbPasswordSignin.PasswordChar = (cbShowpasswordSignin.Checked) ? '\0' : '#';
         }
 
+        public static string username;
         private void btnLoginSignin_Click(object sender, EventArgs e)
         {
 
@@ -53,6 +55,7 @@ namespace IncomeExpenseTracker
 
                     if(table.Rows.Count > 0)
                     {
+                        username = tbUsernameSignin.Text;
                         MessageBox.Show("Login Successfully","Information Message",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         MainPage mainPage = new MainPage();
                         mainPage.Show();

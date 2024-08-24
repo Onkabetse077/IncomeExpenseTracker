@@ -15,6 +15,13 @@ namespace IncomeExpenseTracker
         public MainPage()
         {
             InitializeComponent();
+            DisplayUsername();
+        }
+
+        public void DisplayUsername()
+        {
+            string getUsername = SigninPage.username;
+            lblUsername_Main.Text = getUsername;
         }
 
         private void signupPageExit_Click(object sender, EventArgs e)
@@ -44,6 +51,13 @@ namespace IncomeExpenseTracker
             income_Main.Visible = false;
             expenses_Main.Visible = false;
 
+            Dashboard dashboard = dashboard_Main as Dashboard;
+
+            if (dashboard != null)
+            {
+                dashboard.RefreshData();
+            }
+
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
@@ -52,6 +66,13 @@ namespace IncomeExpenseTracker
             category_Main.Visible = true;
             income_Main.Visible = false;
             expenses_Main.Visible = false;
+
+            Category category = category_Main as Category;
+
+            if (category != null)
+            {
+                category.RefreshData();
+            }
         }
 
         private void btnIncome_Click(object sender, EventArgs e)
@@ -60,6 +81,13 @@ namespace IncomeExpenseTracker
             category_Main.Visible = false;
             income_Main.Visible = true;
             expenses_Main.Visible = false;
+
+            Income income = income_Main as Income;
+
+            if (income != null)
+            {
+                income.RefreshData();
+            }
         }
 
         private void btnExpense_Click(object sender, EventArgs e)
@@ -68,6 +96,13 @@ namespace IncomeExpenseTracker
             category_Main.Visible = false;
             income_Main.Visible = false;
             expenses_Main.Visible = true;
+
+            Expenses expense = expenses_Main as Expenses;
+
+            if (expense != null)
+            {
+                expense.RefreshData();
+            }
         }
     }
 }
