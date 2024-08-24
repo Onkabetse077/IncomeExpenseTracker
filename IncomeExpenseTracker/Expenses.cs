@@ -20,6 +20,18 @@ namespace IncomeExpenseTracker
             InitializeComponent();
             DisplayCategoryList();
             DisplayExpenseList();
+            ClearFields();
+        }
+
+        public void RefreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)RefreshData);
+            }
+            DisplayCategoryList();
+            DisplayExpenseList();
+            ClearFields();
         }
         public void DisplayExpenseList()
         {

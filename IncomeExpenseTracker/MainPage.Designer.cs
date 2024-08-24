@@ -38,15 +38,15 @@
             btnIncome = new Button();
             btnCategory = new Button();
             btnDashboard = new Button();
-            label1 = new Label();
+            lblUsername_Main = new Label();
             lblWelcome = new Label();
             pbMainProfilePic = new PictureBox();
             pnlMain = new Panel();
+            dashboard_Main = new Dashboard();
             expenses_Main = new Expenses();
             income_Main = new Income();
             category_Main = new Category();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            dashboard_Main = new Dashboard();
             pnlHeaderMainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             pnlSideMainPage.SuspendLayout();
@@ -104,7 +104,7 @@
             pnlSideMainPage.Controls.Add(btnIncome);
             pnlSideMainPage.Controls.Add(btnCategory);
             pnlSideMainPage.Controls.Add(btnDashboard);
-            pnlSideMainPage.Controls.Add(label1);
+            pnlSideMainPage.Controls.Add(lblUsername_Main);
             pnlSideMainPage.Controls.Add(lblWelcome);
             pnlSideMainPage.Controls.Add(pbMainProfilePic);
             pnlSideMainPage.Dock = DockStyle.Left;
@@ -203,16 +203,16 @@
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
             // 
-            // label1
+            // lblUsername_Main
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(111, 194);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 21);
-            label1.TabIndex = 3;
-            label1.Text = "Admin";
+            lblUsername_Main.AutoSize = true;
+            lblUsername_Main.Font = new Font("Tahoma", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsername_Main.ForeColor = SystemColors.ButtonHighlight;
+            lblUsername_Main.Location = new Point(111, 194);
+            lblUsername_Main.Name = "lblUsername_Main";
+            lblUsername_Main.Size = new Size(49, 21);
+            lblUsername_Main.TabIndex = 3;
+            lblUsername_Main.Text = "User";
             // 
             // lblWelcome
             // 
@@ -246,6 +246,14 @@
             pnlMain.Size = new Size(1235, 740);
             pnlMain.TabIndex = 2;
             // 
+            // dashboard_Main
+            // 
+            dashboard_Main.Dock = DockStyle.Fill;
+            dashboard_Main.Location = new Point(0, 0);
+            dashboard_Main.Name = "dashboard_Main";
+            dashboard_Main.Size = new Size(1235, 740);
+            dashboard_Main.TabIndex = 10;
+            // 
             // expenses_Main
             // 
             expenses_Main.Dock = DockStyle.Fill;
@@ -269,14 +277,6 @@
             category_Main.Name = "category_Main";
             category_Main.Size = new Size(1235, 740);
             category_Main.TabIndex = 0;
-            // 
-            // dashboard_Main
-            // 
-            dashboard_Main.Dock = DockStyle.Fill;
-            dashboard_Main.Location = new Point(0, 0);
-            dashboard_Main.Name = "dashboard_Main";
-            dashboard_Main.Size = new Size(1235, 740);
-            dashboard_Main.TabIndex = 10;
             // 
             // MainPage
             // 
@@ -309,7 +309,7 @@
         private Panel pnlSideMainPage;
         private PictureBox pbMainProfilePic;
         private Label lblWelcome;
-        private Label label1;
+        private Label lblUsername_Main;
         private Button btnDashboard;
         private Button btnExpense;
         private Button btnIncome;
